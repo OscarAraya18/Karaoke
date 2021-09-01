@@ -1,3 +1,2 @@
 # Karaoke
-Proyecto de SOA - 2021 
-Karaoke jajaja prro brrr anuel AA 888 brrrrrr bebecita ya pa
+Proyecto de SOA - 2021
