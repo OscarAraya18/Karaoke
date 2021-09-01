@@ -1,0 +1,11 @@
+// DENTRO DEL EQUIPO LOCAL
+cd VirtualMachineKeys
+ssh -i DeployVM.pem ubuntu@ec2-3-144-18-0.us-east-2.compute.amazonaws.com
+
+// DENTRO DE LA VM
+cd Karaoke
+cd Frontend
+ng serve --host 0.0.0.0 --port 3000
+
+// DENTRO DEL EQUIPO LOCAL
+Acceder al navegador en la dirección 3.144.18.0:3000
