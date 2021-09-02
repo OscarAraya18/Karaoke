@@ -10,7 +10,7 @@
     position: absolute;
     top: 10vh;
     left: 25%;
-    height: 38vw;
+    height: 78vh;
     width: 50vw;
     align-self:center; 
     border-radius: 4vh;
@@ -20,9 +20,34 @@
   .logo{
     position: relative;
     align-self: center; 
-    top: 3vh;
-    left: 10%;
+    top: 5vh;
+    left: 11%;
     height: 30vh;
     width: 40vw; 
   }
-  
+
+  .input{
+    position: relative;
+    border-radius: 4vh;
+    left: 15%;
+    width: 35vw;
+    height: 4vh;
+
+    text-align: center;
+    font-size: medium;
+    border-color: black;
+  }
+
+  .button{
+    position: relative;
+    border-radius: 2vh;
+    top: 23vh;
+    left: 30%;
+    width: 20vw;
+    height: 7vh;
+
+    background-color: #B7550B;
+    text-align: center;
+    font-size: larger;
+    border-color: black;
+  }
