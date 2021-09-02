@@ -5,3 +5,24 @@
     top: 0vh;
     left: 0vw;
   }
+
+  .container{
+    position: absolute;
+    top: 10vh;
+    left: 25%;
+    height: 38vw;
+    width: 50vw;
+    align-self:center; 
+    border-radius: 4vh;
+    background: rgba(90.2, 96.9, 99.6, 0.6);
+  }
+
+  .logo{
+    position: relative;
+    align-self: center; 
+    top: 3vh;
+    left: 10%;
+    height: 30vh;
+    width: 40vw; 
+  }
+  
