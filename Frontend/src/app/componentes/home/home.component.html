@@ -1,1 +1,25 @@
-<p>home works!</p>
+<div class="upperContainer">
+    <h1 class="title">Canciones disponibles:</h1>
+    <input type="text" style="top: 2vh;" class="input" id="nombreCancion" placeholder="     Nombre de la canción"><br>
+    <input type="text" style="top: 5vh;" class="input" id="nombreAlbum" placeholder="     Nombre del álbum"><br>
+
+    <input type="text" style="top: 8vh;" class="input" id="nombreArtista" placeholder="     Nombre del artista"><br>
+    <input type="text" style="top: 11vh;" class="input" id="fragmentoLetra" placeholder="     Fragmento de la letra"><br>
+
+    <button class="button" (click)="buscarCancion()">
+        Buscar canción
+    </button>
+
+    <img class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/plus.png" (click)="agregarCancion()">
+    <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/logout.png" (click)="cerrarSesion()">
+</div>
+
+<div id="downContainer">
+    <div class="container songContainer" *ngFor="let cancion of canciones; let i = index">
+        <h1>{{cancion.nombre}}</h1>
+        <h1>{{cancion.album}}</h1>
+        <h1>{{cancion.artista}}</h1>
+        
+    </div>
+
+</div>

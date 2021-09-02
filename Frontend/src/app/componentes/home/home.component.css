@@ -1,0 +1,85 @@
+.upperContainer{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+
+    height: 50vh;
+    width: 100vw;
+    background-color: rgb(180, 180, 180);
+    overflow-x: hidden;
+}
+
+.title{
+    position: relative;
+    font-size: 2.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    left: 2vw;
+}
+
+.input{
+    position: relative;
+    border-radius: 1vh;
+    left: 2%;
+    width: 35vw;
+    height: 4vh;
+
+    font-size: medium;
+    border-color: black;
+  }
+
+  .button{
+    position: relative;
+    border-radius: 1vh;
+    top: -4vh;
+    left: 45%;
+    width: 49vw;
+    height: 13vh;
+
+    background-color: #0B6DB7;
+    text-align: center;
+    font-size: 3.5vh;
+    border-color: black;
+    cursor: pointer;
+  }
+
+  .icon{
+    position: relative;
+    align-self: center; 
+    cursor: pointer;
+    top: -30vh;
+    left: -4vw;
+    height: 10vh;
+    width: 5vw; 
+  }
+
+  .icon2{
+    position: relative;
+    align-self: center; 
+    cursor: pointer;
+    top: -33vh;
+    left: 41vw;
+    height: 8vh;
+    width: 4vw; 
+  }
+
+  #downContainer{
+    position: absolute;
+    top: 50vh;
+    left: 0vw;
+    height: 50vh;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.songContainer{
+    display: inline-flex;
+    background: rgba(82, 86, 88, 0.8);
+    height: 30vh;
+    width: 100vw;
+    border-top: 0.4vh solid black;
+    border-bottom: 0.4vh solid black;
+}

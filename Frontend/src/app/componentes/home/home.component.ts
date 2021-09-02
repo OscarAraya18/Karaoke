@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  canciones = [{nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"}];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buscarCancion(){
+  }
+
+  agregarCancion(){
+  }
+
+  cerrarSesion(){
   }
 
 }
