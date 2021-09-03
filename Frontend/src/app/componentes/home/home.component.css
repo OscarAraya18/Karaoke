@@ -78,10 +78,10 @@
 .songContainer{
     display: inline-flex;
     background: rgba(82, 86, 88, 0.8);
-    height: 24vh;
+    height: 23vh;
     width: 100vw;
-    border-top: 0.4vh solid black;
-    border-bottom: 0.4vh solid black;
+    border-top: 0.3vh solid black;
+    border-bottom: 0.3vh solid black;
 }
 
 .songName{
@@ -91,18 +91,26 @@
   left: 2vw;
 }
 
-.albumName{
-  position: absolute;
+.songInfo{
+  position: relative;
   font-size: 1.5vw;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   left: 2.2vw;
   top: 9vh;
 }
 
-.artistName{
+.songIcon{
   position: absolute;
-  font-size: 1.5vw;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  left: 2.2vw;
-  top: 14vh;
+  align-self: center; 
+  cursor: pointer;
+  height: 13vh;
+  width: 6.5vw; 
+}
+
+.songIcon2{
+  position: absolute;
+  align-self: center; 
+  cursor: pointer;
+  height: 5vh;
+  width: 2.5vw; 
 }
