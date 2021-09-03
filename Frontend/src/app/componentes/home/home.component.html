@@ -16,9 +16,9 @@
 
 <div id="downContainer">
     <div class="container songContainer" *ngFor="let cancion of canciones; let i = index">
-        <h1>{{cancion.nombre}}</h1>
-        <h1>{{cancion.album}}</h1>
-        <h1>{{cancion.artista}}</h1>
+        <h1 class="songName">{{cancion.nombre}}</h1>
+        <h2 class="albumName">{{cancion.album}}</h2>
+        <h1 class="artistName">{{cancion.artista}}</h1>
         
     </div>
 

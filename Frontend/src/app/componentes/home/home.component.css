@@ -78,8 +78,31 @@
 .songContainer{
     display: inline-flex;
     background: rgba(82, 86, 88, 0.8);
-    height: 30vh;
+    height: 24vh;
     width: 100vw;
     border-top: 0.4vh solid black;
     border-bottom: 0.4vh solid black;
+}
+
+.songName{
+  position:absolute;
+  font-size: 2.2vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 2vw;
+}
+
+.albumName{
+  position: absolute;
+  font-size: 1.5vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 2.2vw;
+  top: 9vh;
+}
+
+.artistName{
+  position: absolute;
+  font-size: 1.5vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 2.2vw;
+  top: 14vh;
 }
