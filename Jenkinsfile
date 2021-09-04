@@ -16,7 +16,7 @@ pipeline {
             -D sonar.organization=oscararaya18 \
             -D sonar.projectKey=OscarAraya18_Karaoke \
             -D sonar.sources=. \
-            -D sonar.host.url=https://sonarcloud.io/
+            -D sonar.host.url=https://sonarcloud.io/"
             }
         }
         stage('Deploy'){
