@@ -193,7 +193,6 @@ export class PlayerComponent implements OnInit {
     this.letraSiguiente = "";
   }
 
-
   volverAlHome(){
     this.reiniciarCancion();
     this.router.navigate(['home']);

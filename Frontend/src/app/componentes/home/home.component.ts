@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"},
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"}];
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -24,10 +25,11 @@ export class HomeComponent implements OnInit {
   }
 
   cerrarSesion(){
+    this.router.navigate(['']);
   }
 
   reproducirCancion(){
-    
+    this.router.navigate(['player']);
   }
 
   verLetraCancion(){
