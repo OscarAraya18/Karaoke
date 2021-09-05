@@ -94,6 +94,16 @@
     width: 3vw; 
 }
 
+.icon3{
+    position: absolute;
+    align-self: center; 
+    cursor: pointer;
+    top: 5.5vh;
+    left: 97vw;
+    height: 4vh;
+    width: 2vw; 
+}
+
 .timeLabel{
     position: absolute;
     font-size: 1.5vw;

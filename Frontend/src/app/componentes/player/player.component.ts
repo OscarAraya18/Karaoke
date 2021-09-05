@@ -1,5 +1,7 @@
+import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-player',
@@ -11,110 +13,79 @@ export class PlayerComponent implements OnInit {
   tiempoTranscurrido: number = 0;
   tiempoTranscurridoGrafico: number = 0;
   tiempoTranscurridoMinutos: String = "00:00.00";
-  tiempoTotalMinutos: String = "06:41.70";
+  tiempoTotalMinutos: String = "03:27.50";
 
   interval : any;
   intervaloGrafico : any;
 
   reproduciendo: boolean = false;
 
-  nombreCancion = "Delincuente"
-  segundosCancion = 402;
+  nombreCancion = "Yonaguni"
+  segundosCancion = 207;
   audioCancion: any;
 
   letraCancionLRC = `
-  [00:22.10]Dicen que soy un delincuente por ahí la gente es lo que habla
-  [00:27.90]Por mí que hablen que comenten porque a nadie le debo nada
-  [00:33.40]Gracias a Dios le doy porque él me trajo hasta aquí Wassup uah
-  [00:39.10]No me dejó **** y me di cuenta quién está pa mí Pa mí pa mí
-  [00:44.60]Dicen que soy un delincuente Blup blup por ahí la gente es lo que habla Blep oeh
-  [00:50.90]Por mí que hablen que comenten porque a nadie le debo nada Pum-pum-pum Ya-yah
-  [00:55.80]Gracias a Dios le doy porque él me trajo hasta aquí Bless bless
-  [01:01.20]No me dejó **** y me di cuenta quién está pa mí Anuel brrr
-  [01:08.30]Diablo que cherreo ¿Ah
-  [01:09.40]Cogí dinero y me bajaron el de'o Jaja
-  [01:12.30]Ya no era el rey del trapeo
-  [01:13.60]Ahora soy un diablo y la prensa me quiere ver preso
-  [01:16.80]Y hablan ****** 'e mí pero no hablan del congreso Jaja
-  [01:19.70]Dicen que soy un delincuente el rifle siempre en mi casa Uah
-  [01:24.90]Tantos *******s que me odian y que siempre me amenazan No
-  [01:30.60]Y no me vo a dejar matar y voy a ver a mi hijo crecer -er
-  [01:35.10]Y también me necesita mi mujer -jer
-  [01:37.70]Mi mai no para de llorar sé que fallé Uah
-  [01:40.40]Porque yo era su ángel y me convertí en Lucifer
-  [01:44.00]Y me superé
-  [01:45.00]Me cancelaron el Choli en la prisión me quieren ver
-  [01:47.70]Me juzgaron por mi letra y me metieron el pie
-  [01:50.50]Pero cincuenta millone' gira mundial ya coroné uah
-  [01:55.10]¿Y qué me van a hacer uah
-  [01:57.80]'Toy borracho de poder uah
-  [02:00.60]Dicen "¿Quién este se cree" uah
-  [02:03.40]Hijue**** soy Anuel uah
-  [02:07.70]Dicen que soy un delincuente Eh-eh por ahí la gente es lo que habla Eh-eh eh
-  [02:13.70]Por mí que hablen que comenten porque a nadie le debo nada Pum-pum-pum
-  [02:19.20]Gracias a Dios le doy porque él me trajo hasta aquí Wassup
-  [02:24.10]No me dejó **** y me di cuenta quién está pa mí Pa mí; ¡Farru Yah-yah-yah
-  [02:31.00]Llegó un chárter privado a la pista 'e aterrizaje
-  [02:33.60]Desembarca individuo conocido personaje
-  [02:36.30]Un can del TSA se sienta y marca el equipaje
-  [02:39.20]Y oficiale de aduana preguntan que cuánto en efectivo traje Pu-pu-pu-pum
-  [02:42.70]Disculpe oficial no recuerdo cantida exacta
-  [02:44.90]Vengo cansa'o del viaje un mal rato no me hace falta
-  [02:47.80]Si e má de lo debido pues se reporta y se informa
-  [02:50.70]Llené mal el papel disculpa no leí las norma Pu-pu-pu-pum
-  [02:53.60]No hay nada que esconder yo ando totalmente legal
-  [02:56.30]Jefe yo soy cantante yo vengo de trabajar
-  [02:59.10]Confísquenlo si quieren con él se pueden quedar
-  [03:02.00]Pero no venga a arrestarme porque se quieren pautar
-  [03:05.50]Se lucraron curaron de mí ****** hablaron y yo calla'o me quedé Shh
-  [03:11.20]Difamaron juzgaron hasta me trancaron pero allá arriba hay un jue Allá arriba hay uno
-  [03:16.60]Que todo lo ve y yo confío en él En nombre del padre del hijo
-  [03:22.10]Tratan de meterme el pie pero no van a poder Del espíritu santo
-  [03:27.50]Y aunque digan que soy Bum
-  [03:29.70]Un bandolero donde voy Pu-pu-pu-pum uah
-  [03:32.70]Le doy gracia a Dio Ooh a Dio'
-  [03:35.90]Por hoy estar donde estoy Eh-eh
-  [03:38.70]Y vo a seguir con mi tumbao Aah oh-oh
-  [03:41.20]Y mis ojo colora'o Colora'o
-  [03:44.60]Con los mío activa'o Activa'o uah
-  [03:47.60]Ustede to me lo han da'o Uah pu-pu-pu-pum
-  [03:53.40]Dicen que soy un delincuente por ahí la gente es lo que habla
-  [03:59.30]Por mí que hablen que comenten porque a nadie le debo nada
-  [04:04.90]Gracias a Dios le doy porque él me trajo hasta aquí Wassup
-  [04:10.40]No me dejó **** y me di cuenta quién está pa mí Pa mí pa mí
-  [04:16.30]Dicen que soy un delincuente Blup blup; eh-eh por ahí la gente es lo que habla Blep oeh
-  [04:22.20]Por mí que hablen que comenten porque a nadie le debo nada Pum-pum-pum Ya-yah
-  [04:27.70]Gracias a Dios le doy porque él me trajo hasta aquí Bless bless
-  [04:32.60]No me dejó **** y me di cuenta quién está pa mí Pa mí pa mí
-  [04:41.70]Una ve alguien dijo que la clave del éxito e la calma
-  [04:44.40]Y que vendría sin aviso sin bandera y sin alarma
-  [04:47.20]Que no me desespere
-  [04:48.50]Eme dijo algo del "Ojo por ojo"
-  [04:50.50]Y "Del que al hierro muere"
-  [04:51.70]¿Pero sabe cuánto inocente mataron que nunca dispararon
-  [04:54.80]¿Y cuánto hemo hecho má de lo que escribo y seguimo vivo'
-  [04:57.80]Y e que los refrane generalista son para soldado'
-  [05:01.00]Que no nacieron para ser generales en fin
-  [05:03.00]Si intentamo no ser otro más todo se define en resistir
-  [05:06.60]En soportar sin medir
-  [05:08.00]Cambiando tanta cosa que a veces siente que dejas de existir
-  [05:11.20]Fracaso no; rendirse no; matarlo' no; vengarlo' no; odiarlo' no
-  [05:14.00]Yo sé que existe un Dios ¿pero y si no
-  [05:17.40]No e lo mismo dudar que no creer
-  [05:19.10]Por eso no permito que nadie subestime mi fe
-  [05:21.80]Tengo muerto que dieron má problema estando vivo'
-  [05:24.30]Pero tengo vivo sueltos que darían más problema estando muerto'
-  [05:27.80]Y eso e sin hablar de su amigo'
-  [05:29.60]¿Qué saben ustede de brincarle los sueño por las regresione'
-  [05:33.00]¿De levantarse a contar las ******* día de tu sentencia para volver a aplastar a estos *******'
-  [05:37.90]Jamás entenderán de lo que hablo
-  [05:39.80]Pero si sigo vivo e porque Dio ha luchado por mi vida
-  [05:42.80]Mucho má de lo que ha luchado el Diablo amén
-  [06:11.60]El único que me puede juzgar e Dio'
-  [06:14.20]Aunque un ejercito acampe contra mí no temerá mi corazón
-  [06:17.80]Aunque contra mí se levante guerra yo estaré confiado
-  [06:24.50]El sistema a nosotro no no corrompe papi nosotro nunca vamo a chotear jejeje
-  [06:28.70]Real hasta la muerte ******`;
+  [00:01.52]Yeah-Yeah-Yeah-Yeah
+  [00:03.68]Yeah-Yeah-Yeah-Yeah-Yeah-Yeah
+  [00:06.86]Yeah-Yeah-Yeah-Eh, Yeah
+  [00:10.59]Una Noche Más Y Copas De Más
+  [00:15.41]Tú No Me Dejas En Paz, De Mi Mente No Te Vas
+  [00:20.35]Aunque Sé Que No Debo, Ey
+  [00:23.55]Pensar En Ti, Bebé, Pero Cuando Bebo
+  [00:28.36]Me Viene Tu Nombre, Tu Cara, Tu Risa Y Tu Pelo, Ey
+  [00:33.66]Dime Dónde Tú Está', Que Yo Por Ti Cojo Un Vuelo
+  [00:38.34]Y A Yonaguni Le Llego, Oh
+  [00:41.76]Aunque Sé Que No Debo, Ey
+  [00:44.80]Pensar En Ti, Bebé, Pero Cuando Bebo
+  [00:49.60]Me Viene Tu Nombre, Tu Cara, Tu Risa Y Tu Pelo, Ey
+  [00:54.77]Dime Dónde Tú Está', Que Yo Por Ti Cojo Un Vuelo
+  [00:59.53]Y A Yonaguni Le Llego, Ey
+  [01:02.38]No Me Busque' En Instagram, Mami, Búscame En Casa
+  [01:06.88]Pa' Que Vea' Lo Que Pasa, Ey
+  [01:09.46]Si Tú Me Prueba', Te Casa', Ey
+  [01:12.15]Ese Cabrón Ni Te Abraza
+  [01:13.98]Y Yo Loco Por Tocarte
+  [01:16.65]Pero Ni Me Atrevo A Textearte
+  [01:19.32]Tú Con Cualquier Outfit La Parte'
+  [01:22.26]Mami, Tú Ere' Aparte
+  [01:24.69]Shorty, Tiene' Un Culo Bien Grande, Eh
+  [01:28.23]De-Demasia'o Grande
+  [01:30.14]Y Yo Lo Tengo Estudia'o, Ya Mismo Me Gradúo
+  [01:33.33]Y En La Cara Me Lo Tatúo
+  [01:35.66]Vi Que Viste Mi Story Y Subiste Una Pa' Mí
+  [01:39.39]Yo Que Me Iba A Dormir, Ey
+  [01:41.56]En La Disco Habían Mil
+  [01:43.34]Y Yo Bailando Contigo En Mi Mente
+  [01:45.65]Aunque Sé Que No Debo
+  [01:48.85]Pensar En Ti, Bebé, Pero Cuando Bebo
+  [01:53.63]Me Viene Tu Nombre, Tu Cara, Tu Risa Y Tu Pelo, Ey
+  [01:58.83]Dime Dónde Tú Está', Que Yo Por Ti Cojo Un Vuelo
+  [02:03.66]Y A Yonaguni Le Llego
+  [02:06.78]Si Me Da' Tu Dirección, Yo Te Mando Mil Carta'
+  [02:09.91]Si Me Da' Tu Cuenta De Banco, Un Millón De Peso'
+  [02:12.82]To'a La Noche Arrodillado A Dio' Le Rezo
+  [02:14.99]Pa' Que Ante' Que Se Acabe El Año Tú Me De' Un Beso
+  [02:18.32]Y Empezar El 2023 Bien Cabrón
+  [02:21.66]Contigo Y Un Blunt
+  [02:23.60]Tú Te Ve' Asesina Con Ese Mahón (¡Wuh!)
+  [02:26.38]Me Matas Sin Un Pistolón
+  [02:28.80]Y Yo Te Compro Un Banshee
+  [02:31.34]Gucci, Givenchy
+  [02:33.02]Un Poodle, Un Frenchie
+  [02:34.59]El Pasto, Lo' Munchie'
+  [02:36.40]Te Canto Un Mariachi
+  [02:38.34]Me Convierto En Itachi, Eh
+  [02:41.66]Yeah-Yeah-Yeah-Yeah
+  [02:43.60]Bad Bunny, Baby, Bebé
+  [02:46.27]Bad Bunny, Baby, Bebé
+  [02:50.34]Kyo Wa Sekkusushitai
+  [02:53.15]Demo Anata To Dake
+  [02:56.07]Doko Ni Imasu Ka?
+  [02:58.51]Doko Ni Imasu Ka?
+  [03:00.96]Kyo Wa Sekkusushitai
+  [03:03.78]Demo Anata To Dake
+  [03:06.59]Doko Ni Imasu Ka?
+  [03:09.17]Doko Ni Imasu Ka? Eh`;
 
   letraCancion = [{tiempo:"",letra:""}];
 
@@ -126,7 +97,7 @@ export class PlayerComponent implements OnInit {
   anchoPantalla: number = 0;
 
 
-  constructor() { 
+  constructor(private router:Router) { 
     this.obtenerAnchoPantalla();
   }
 
@@ -134,7 +105,7 @@ export class PlayerComponent implements OnInit {
     //Obtener informacion de la cancion del servidor
 
     this.audioCancion = new Audio();
-    this.audioCancion.src = 'https://res.cloudinary.com/dfionqbqe/video/upload/v1630819789/CE5508/Farruko_Anuel_AA_Kendo_Kaponi_-_Delincuente_Official_Video.mp3';
+    this.audioCancion.src = 'https://res.cloudinary.com/dfionqbqe/video/upload/v1630814237/CE5508/Bad_Bunny_-_Yonaguni_LetraLyrics.mp3';
     this.audioCancion.load();
     this.transformarLRC();
 
@@ -219,7 +190,13 @@ export class PlayerComponent implements OnInit {
     let anchoBarra = "width:"+ (this.tiempoTranscurrido).toString() + "px";
     document.getElementById('songStatus')?.setAttribute("style",anchoBarra);
     this.letraMostrada = "";
+    this.letraSiguiente = "";
+  }
 
+
+  volverAlHome(){
+    this.reiniciarCancion();
+    this.router.navigate(['home']);
   }
 
 }
