@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {MatDialog} from '@angular/material/dialog';
+import { SiNoPopupComponent } from '../si-no-popup/si-no-popup.component';
+//import { SiNoPopupComponent } from '../si-no-popup/si-no-popup.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +17,7 @@ export class HomeComponent implements OnInit {
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"},
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"}];
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +29,10 @@ export class HomeComponent implements OnInit {
   }
 
   cerrarSesion(){
-    this.router.navigate(['']);
+    this.dialog.open(SiNoPopupComponent,{
+      height:'25vh',
+      width:'40vw'
+    });
   }
 
   reproducirCancion(){
