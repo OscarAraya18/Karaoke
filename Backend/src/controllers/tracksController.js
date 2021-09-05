@@ -179,8 +179,7 @@ const updateCancion = (req, res) => {
 
     var db = obtenerConexion();
     var newvalues = { $set: req.body};
-
-    console.log(newvalues);
+    
     db.collection("metadata").updateOne({cancionId : idCancion}, newvalues, function(err) {
         if (err) {
             console.log(err);
