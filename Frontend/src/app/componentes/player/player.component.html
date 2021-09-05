@@ -1,0 +1,22 @@
+<div class="container upperContainer">
+    <h1 class="lyric">{{letraMostrada}}</h1>
+    <h1 class="nextLyric">{{letraSiguiente}}</h1>
+
+
+    <h1 class="timeLabel" style="left: 0.7vw;">{{tiempoTranscurridoMinutos}}</h1>
+    <h1 class="timeLabel" style="left: 93.3vw;">{{tiempoTotalMinutos}}</h1>
+</div>
+
+<div class="container downContainer">
+    <div class="container songContainer">
+        <div class="container currentTimeContainer" id="songStatus">
+        </div>
+    </div>
+
+    <img *ngIf="reproduciendo" class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/pause.png" (click)="pausarCancion()">
+    <img *ngIf="!reproduciendo" class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/play-button.png" (click)="reproducirCancion()">
+    <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/stop.png" (click)="reiniciarCancion()">
+    
+    <h1 class="title">{{nombreCancion}}</h1>
+    
+</div>

@@ -1,0 +1,103 @@
+.upperContainer{
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+
+    height: 88vh;
+    width: 100vw;
+    background-color: rgb(180, 180, 180);
+    text-align: center;
+}
+
+
+
+.title{
+    position: absolute;
+    font-size: 2vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    left: 1.5vw;
+    top: 1.5vh;
+}
+
+
+.lyric{
+    position: relative;
+    font-size: 3vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    vertical-align: middle;
+    top: 32vh;
+}
+
+.nextLyric{
+    position: relative;
+    font-size: 1.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(102, 102, 102);
+    vertical-align: middle;
+    top: 35vh;
+}
+
+
+.downContainer{
+    position: absolute;
+    top: 88vh;
+    left: 0vw;
+
+    height: 12vh;
+    width: 100vw;
+    background-color: #363636;
+    overflow-x: hidden;
+
+    
+}
+
+.songContainer{
+    position: absolute;
+    background: rgba(29, 52, 63, 0.8);
+    left: 0vw;
+    top: 0vw;
+    height: 2vh;
+    width: 99.6vw;
+    border: 0.4vh solid black;
+    overflow-x: hidden;
+
+}
+
+.currentTimeContainer{
+    position: absolute;
+    background: #0B6DB7;
+    left: 0vw;
+    top: 0vw;
+    height: 2vh;
+    overflow-x: hidden;
+}
+
+.icon{
+    position: absolute;
+    align-self: center; 
+    cursor: pointer;
+    top: 4.4vh;
+    left: 47vw;
+    height: 6vh;
+    width: 3vw; 
+}
+
+.icon2{
+    position: absolute;
+    align-self: center; 
+    cursor: pointer;
+    top: 4.4vh;
+    left: 51vw;
+    height: 6vh;
+    width: 3vw; 
+}
+
+.timeLabel{
+    position: absolute;
+    font-size: 1.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    top: 81vh;
+}
