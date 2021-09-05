@@ -35,15 +35,48 @@ const getCancion = (req, res) => {
     });
 };
 
+const getLetra = (req, res) => {
+    let idCancion;
+
+    try {
+        idCancion = new ObjectId(req.params.trackId);
+    } catch (error) {
+        return res.status(400).json({message: "Id invalido en la URL"})
+    }
+    const db = obtenerConexion();
+    db.collection("metadata").find({cancionId: idCancion})
+    .toArray(function(err, result) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({message: err.message});
+        }
+        return res.status(200).send(result);
+      });
+};
+
+const getAllCanciones = (req, res) => {
+    const db = obtenerConexion();
+    
+    db.collection("canciones.files").find({})
+    .toArray(function(err, result) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({message: err.message});
+        }
+        return res.status(200).send(result);
+      });
+};
+
+
 const postCancion = (req, res) => {
     const storage = multer.memoryStorage();
     const upload = multer({
         storage,
         limits: {
-            fields: 1,
+            fields: 4,
             fileSize: 10000000,
             files: 1,
-            parts: 2
+            parts: 5
         }
     });
     upload.single('track')(req, res, (err) => {
@@ -51,11 +84,15 @@ const postCancion = (req, res) => {
             console.log(err);
             return res.status(400).json({message: err.message});
         }
-        else if (!req.body.name){
-            return res.status(400).json({message: "No se agrego nombre a la cancion"});
+        else if (!req.body.name || !req.body.album ||
+            !req.body.artista || !req.body.letra){
+            return res.status(400).json({message: "Faltaron atributos para la cancion"});
         }
         
         let nombreCancion = req.body.name;
+        let album = req.body.album;
+        let artista = req.body.artista;
+        let letra = req.body.letra;
 
         const readableTrackStream = new Readable();
         readableTrackStream.push(req.file.buffer);
@@ -70,19 +107,96 @@ const postCancion = (req, res) => {
         const id = uploadStream.id;
         readableTrackStream.pipe(uploadStream);
 
+        var myObject = {
+            cancionId: id,
+            album: album,
+            artista: artista,
+            letra: letra
+        };
+
         uploadStream.on('error', () => {
             return res.status(500).json({ message: "Error subiendo el archivo" });
         });
 
         uploadStream.on('finish', () => {
+            
+            db.collection("metadata").insertOne(myObject, (err, res) => {
+                if (err) {
+                    return res.status(400).json({ message: "Error subiendo la metadata" });
+                }
+                console.log("1 document inserted");
+            });
+
             return res.status(200).json({ message: "Archivo subido satisfactoriamente. El id es: " + id });
         });
     });
 };
 
+const deleteCancion = (req, res) => {
+    try {
+        idCancion = new ObjectId(req.params.trackId);
+    } catch (error) {
+        return res.status(400).json({message: "Id invalido en la URL"})
+    }
+
+    var db = obtenerConexion();
+
+    //primero se eliminan los pedazos
+    db.collection("canciones.chunks").deleteMany({ files_id: idCancion }, function (err, obj) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({ message: err.message });
+        }
+    });
+
+    //despues se elimina el archivo en si  
+    db.collection("canciones.files").deleteMany({ _id: idCancion }, function (err, obj) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({ message: err.message });
+        }
+    });
+
+    //ademas se elimina la metadata
+    db.collection("metadata").deleteMany({ cancionId: idCancion }, function (err, obj) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({ message: err.message });
+        }
+        return res.status(200).json({ message: "Cancion eliminada correctamente" });
+    });
+
+};
+
+const updateCancion = (req, res) => {
+    let idCancion;
+
+    try {
+        idCancion = new ObjectId(req.params.trackId);
+    } catch (error) {
+        return res.status(400).json({message: "Id invalido en la URL"})
+    }
+
+    var db = obtenerConexion();
+    var newvalues = { $set: req.body};
+
+    console.log(newvalues);
+    db.collection("metadata").updateOne({cancionId : idCancion}, newvalues, function(err) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({ message: err.message });
+        }
+        return res.status(200).json({ message: "Cancion actualizada correctamente" });
+      });
+};
+
 module.exports = {
     getCancion,
-    postCancion
+    postCancion,
+    getAllCanciones,
+    getLetra,
+    deleteCancion,
+    updateCancion
 }
 
-//613047b39d4ccaaedd4e34b8
+//Referencias: https://www.w3schools.com/nodejs/
