@@ -24,8 +24,7 @@ export class PlayerComponent implements OnInit {
   segundosCancion = 207;
   audioCancion: any;
 
-  letraCancionLRC = `
-  [00:01.52]Yeah-Yeah-Yeah-Yeah
+  letraCancionLRC = `[00:01.52]Yeah-Yeah-Yeah-Yeah
   [00:03.68]Yeah-Yeah-Yeah-Yeah-Yeah-Yeah
   [00:06.86]Yeah-Yeah-Yeah-Eh, Yeah
   [00:10.59]Una Noche Más Y Copas De Más

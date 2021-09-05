@@ -1,0 +1,27 @@
+.title{
+    position: relative;
+    font-size: 1.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    top: 0vh;
+}
+
+.iconYes{
+    position: relative;
+    align-self: center; 
+    cursor: pointer;
+    top: 2.5vh;
+    left: -3vw;
+    height: 6vh;
+    width: 3vw; 
+}
+
+.iconNo{
+    position: relative;
+    align-self: center; 
+    cursor: pointer;
+    top: 2.5vh;
+    left: 3vw;
+    height: 6vh;
+    width: 3vw; 
+}

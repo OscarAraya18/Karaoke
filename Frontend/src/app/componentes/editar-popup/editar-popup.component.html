@@ -1,1 +1,50 @@
-<p>editar-popup works!</p>
+<div *ngIf="id==1">
+    <h1 class="title" style="top: -1vh;left: -14.4vw;">Nombre de la canción:</h1>
+    <input type="text" style="top: -0.5vh;" class="input" id="nombreCancion" placeholder="Coloque el nombre de la canción"><br>
+
+    <h1 class="title" style="top: 1vh;left: -15.4vw;">Nombre del álbum:</h1>
+    <input type="text" style="top: 0.5vh;" class="input" id="nombreAlbum" placeholder="Coloque el nombre de la álbum"><br>
+
+    <h1 class="title" style="top: 2vh;left: -15.4vw;">Nombre del artista:</h1>
+    <input type="text" style="top: 1.5vh;" class="input" id="nombreArtista" placeholder="Coloque el nombre del artista"><br>
+
+    <h1 class="title" style="top: 3vh;left: -20vw;">Letra:</h1>
+    <textarea id="letraCancion" style="top: 3vh;" class="inputLetra" placeholder="Coloque la letra de la canción en formato LRC"></textarea>
+
+    <h1 class="title" style="top: 4.5vh;left: -20vw;">Audio:</h1>
+    <input type="text" style="top: -1.5vh;" class="input2" id="nombreArtista" value="{{nombreCancion}}" readonly="true"><br>
+    <button class="button" onclick="document.getElementById('audioCancion').click()">Cargar audio</button>
+    <input type="file" id="audioCancion" accept=".mp3" style="display: none;" (change)="subidaAudio($event)"><br>
+    
+
+    <button class="button2" (click)="crearCancion()">Agregar canción</button>
+
+    <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622322993/CE4101/TaskPlanner/Back2.png" mat-dialog-close>
+
+</div>
+
+<div *ngIf="id==2">
+    <h1 class="title" style="top: -1vh;left: -14.4vw;">Nombre de la canción:</h1>
+    <input type="text" style="top: -0.5vh;" class="input" id="nombreCancion" value="{{cancion.nombre}}"><br>
+
+    <h1 class="title" style="top: 1vh;left: -15.4vw;">Nombre del álbum:</h1>
+    <input type="text" style="top: 0.5vh;" class="input" id="nombreAlbum" value="{{cancion.album}}"><br>
+
+    <h1 class="title" style="top: 2vh;left: -15.4vw;">Nombre del artista:</h1>
+    <input type="text" style="top: 1.5vh;" class="input" id="nombreArtista" value="{{cancion.artista}}"><br>
+
+    <h1 class="title" style="top: 3vh;left: -20vw;">Letra:</h1>
+    <textarea id="letraCancion" style="top: 3vh;" class="inputLetra">{{cancion.letra}}</textarea>
+
+    <h1 class="title" style="top: 4.5vh;left: -20vw;">Audio:</h1>
+    <input type="text" style="top: -1.5vh;" class="input2" id="nombreArtista" value="{{nombreCancion}}" readonly="true"><br>
+    <button class="button" onclick="document.getElementById('audioCancion').click()">Cargar audio</button>
+    <input type="file" id="audioCancion" accept=".mp3" style="display: none;" (change)="subidaAudio($event)"><br>
+    
+
+    <button class="button2" (click)="editarCancion()">Guardar cambios</button>
+
+    <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622322993/CE4101/TaskPlanner/Back2.png" mat-dialog-close>
+
+</div>
+

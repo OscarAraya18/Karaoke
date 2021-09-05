@@ -10,7 +10,7 @@
         Buscar canción
     </button>
 
-    <img class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/plus.png" (click)="agregarCancion()">
+    <img class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/plus.png" (click)="crearCancion()">
     <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/logout.png" (click)="cerrarSesion()">
 </div>
 
@@ -22,9 +22,9 @@
         <h1 class="songInfo">{{cancion.album}} <br>{{cancion.artista}}
         </h1>
         
-        <img class="songIcon" style="left: 80vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/play-button.png" (click)="reproducirCancion()">
-        <img class="songIcon2" style="left: 90vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/editar.png" (click)="editarCancion()">
-        <img class="songIcon2" style="left: 94vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/trash.png" (click)="eliminarCancion()">
+        <img class="songIcon" style="left: 80vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/play-button.png" (click)="reproducirCancion(i)">
+        <img class="songIcon2" style="left: 90vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/editar.png" (click)="editarCancion(i)">
+        <img class="songIcon2" style="left: 94vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/trash.png" (click)="eliminarCancion(i)">
 
 
     </div>

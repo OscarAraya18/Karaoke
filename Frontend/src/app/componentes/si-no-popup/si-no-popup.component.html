@@ -1,1 +1,10 @@
-<p>si-no-popup works!</p>
+<h1 class="title">{{mensaje}}</h1>
+
+<img class="iconYes" mat-dialog-close *ngIf="id==1" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622088349/CE4101/TaskPlanner/Yes2.png" (click)="cerrarSesion()">
+<img class="iconYes" mat-dialog-close *ngIf="id==2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622088349/CE4101/TaskPlanner/Yes2.png" (click)="eliminarCancion()">
+<img class="iconYes" mat-dialog-close *ngIf="id==3" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622088349/CE4101/TaskPlanner/Yes2.png" (click)="editarCancion()">
+<img class="iconYes" mat-dialog-close *ngIf="id==4" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622088349/CE4101/TaskPlanner/Yes2.png" (click)="crearCancion()">
+
+
+
+<img class="iconNo" mat-dialog-close src="https://res.cloudinary.com/dfionqbqe/image/upload/v1622088349/CE4101/TaskPlanner/No2.png">
