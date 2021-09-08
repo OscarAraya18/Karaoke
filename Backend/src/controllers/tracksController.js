@@ -44,8 +44,9 @@ const getLetra = (req, res) => {
         return res.status(400).json({message: "Id invalido en la URL"})
     }
     const db = obtenerConexion();
-    db.collection("metadata").find({cancionId: idCancion})
-    .toArray(function(err, result) {
+    db.collection("metadata").findOne({cancionId: idCancion}, 
+        { projection: { _id: 0, album: 0, artista: 0 } }
+    , function(err, result) {
         if (err) {
             console.log(err);
             return res.status(400).json({message: err.message});
@@ -57,7 +58,7 @@ const getLetra = (req, res) => {
 const getAllCanciones = (req, res) => {
     const db = obtenerConexion();
     
-    db.collection("canciones.files").find({})
+    db.collection("metadata").find({}, { projection: { _id: 0, letra: 0 } } ).limit(20)
     .toArray(function(err, result) {
         if (err) {
             console.log(err);
@@ -109,6 +110,7 @@ const postCancion = (req, res) => {
 
         var myObject = {
             cancionId: id,
+            nombre: nombreCancion,
             album: album,
             artista: artista,
             letra: letra
@@ -189,13 +191,47 @@ const updateCancion = (req, res) => {
       });
 };
 
+const buscarCancion = (req, res) => {
+    var {letra, nombre, album, artista} = req.query;
+
+    const db = obtenerConexion();
+
+    let criterio;
+
+    if (letra != ''){
+        criterio = { $or: [
+            {album: album},
+            {nombre: nombre},
+            {artista: artista},
+            {letra: {$regex : letra} }
+        ]}
+    }
+    else{
+        criterio = { $or: [
+            {album: album},
+            {nombre: nombre},
+            {artista: artista}
+        ]}
+    }
+
+    db.collection("metadata").find(criterio, { projection: { _id: 0, letra: 0 } })
+    .toArray(function(err, result) {
+        if (err) {
+            console.log(err);
+            return res.status(400).json({message: err.message});
+        }
+        return res.status(200).send(result);
+      });
+};
+
 module.exports = {
     getCancion,
     postCancion,
     getAllCanciones,
     getLetra,
     deleteCancion,
-    updateCancion
+    updateCancion, 
+    buscarCancion
 }
 
 //Referencias: https://www.w3schools.com/nodejs/
