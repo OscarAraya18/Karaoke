@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git repo'){
             steps{
-                git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke/'
+                git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke.git'
             }
         }
         stage('Unit testing'){
