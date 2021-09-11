@@ -23,8 +23,8 @@ pipeline {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'Solution', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd Karaoke
                 git pull https://github.com/OscarAraya18/Karaoke
                 cd Backend
-                npm start &
-                ^C
+                nmp i
+                pm2 start src/index.js
                 cd ..
                 cd Frontend
                 ng serve --host 0.0.0.0 --port 3000
