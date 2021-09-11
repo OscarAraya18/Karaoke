@@ -7,6 +7,13 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke/'
             }
         }
+        stage('Unit testing'){
+            steps {
+                dir('Karaoke/Backend') {
+                    sh 'npm run test'
+                }
+            }
+        }
         stage('SonarCloud Analysis'){
             steps {
                 withSonarQubeEnv('sonar'){
