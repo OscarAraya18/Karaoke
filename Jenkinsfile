@@ -11,7 +11,7 @@ pipeline {
             steps {
                 dir('Backend') {
                     sh 'npm i'
-                    sh 'npm test'
+                    sh 'npm run test'
                 }
             }
         }
