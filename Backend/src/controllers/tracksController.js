@@ -121,7 +121,7 @@ const postCancion = (req, res) => {
         });
 
         uploadStream.on('finish', () => {
-            
+            console.log("Hola");
             db.collection("metadata").insertOne(myObject, (err, res) => {
                 if (err) {
                     return res.status(400).json({ message: "Error subiendo la metadata" });
