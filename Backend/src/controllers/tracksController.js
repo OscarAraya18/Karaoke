@@ -91,10 +91,8 @@ const postCancion = (req, res) => {
         }
         
         let nombreCancion = req.body.name;
-        console.log('album: ' + req.body.album);
         let album = req.body.album;
         let artista = req.body.artista;
-        console.log('track: ' + req.file.buffer);
         let letra = req.body.letra;
 
         const readableTrackStream = new Readable();
