@@ -70,6 +70,7 @@ const getAllCanciones = (req, res) => {
 
 
 const postCancion = (req, res) => {
+    console.log('Cuerpo: ' + req.body);
     const storage = multer.memoryStorage();
     const upload = multer({
         storage,
