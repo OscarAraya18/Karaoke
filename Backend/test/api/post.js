@@ -35,7 +35,7 @@ describe('POST /tracks', () => {
           .field('album', "Album test")
           .field('artista', "Artist test")
           .field('name', 'track test')
-          .expect(400)
+          .expect(500)
           .expect({ message: "Error subiendo el archivo" })
           .end((err) => {
               if(err) return done(err);
