@@ -11,6 +11,7 @@ const { obtenerConexion } = require('../../src/database');
 describe('POST /tracks', () => {
 
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
+    console.log(file);
 
     it('OK, creando una cancion',  done => {
         request(app)
