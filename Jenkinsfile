@@ -5,12 +5,11 @@ pipeline {
         stage('Git repo'){
             steps{
                 git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke/'
-                sh 'pwd'
             }
         }
         stage('Unit testing'){
             steps {
-                dir('Karaoke/Backend') {
+                dir('Backend') {
                     sh 'npm run test'
                 }
             }
