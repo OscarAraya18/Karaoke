@@ -9,9 +9,9 @@ const { obtenerConexion } = require('../../src/database');
 
 describe('POST /tracks', () => {
 
-    before(done => {
-        obtenerConexion();
-      });
+    /*after(done => {
+        obtenerConexion().close();
+      });*/
 
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
 
@@ -23,6 +23,9 @@ describe('POST /tracks', () => {
             .field('album', "Album test")
             .field('artista', "Artist test")
             .field('name', 'track test')
+            .on('progress', (e) => {
+              console.log((e.loaded * 100) / e.total);
+            })
             .expect(200)
             .end((err) => {
                 if(err) return done(err);

@@ -13,6 +13,7 @@ describe('GET /tracks/:trackId', () => {
     
     before(done => {
         obtenerConexion();
+        done();
     });
 
     it('Fail, el id es invalido', (done) => {

@@ -7,8 +7,8 @@ let db;
 
 if (process.env.NODE_ENV == 'test'){
     const Mockgoose = require('mockgoose').Mockgoose;
-    const mockgoose = new Mockgoose(mongoose);
-    mockgoose.helper.setDbVersion('3.6.8');
+    var mockgoose = new Mockgoose(mongoose);
+    //mockgoose.helper.setDbVersion('3.2.1');
 
     mockgoose.prepareStorage().then(() => {
         mongoose.connect('mongodb://localhost:1234/test', { useNewUrlParser: true}, (err) => {
