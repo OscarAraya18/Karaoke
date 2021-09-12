@@ -11,8 +11,8 @@ pipeline {
             steps {
                 dir('Backend') {
                     sh '''npm i
-                    npm uninstall --save-dev mocha
-                    npm install --save-dev mocha'''
+                    npm uninstall --save-dev mockgoose
+                    npm install --save-dev mockgoose'''
                     sh 'npm run test'
                 }
             }
