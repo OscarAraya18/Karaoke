@@ -10,7 +10,9 @@ pipeline {
         stage('Unit testing'){
             steps {
                 dir('Backend') {
-                    sh 'npm i'
+                    sh '''npm i
+                    npm uninstall --save-dev mocha
+                    npm install --save-dev mocha'''
                     sh 'npm run test'
                 }
             }
