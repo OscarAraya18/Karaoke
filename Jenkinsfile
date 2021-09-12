@@ -11,7 +11,6 @@ pipeline {
             steps {
                 dir('Backend') {
                     sh 'npm i'
-                    sh 'npm i --save mocha chai supertest mockgoose'
                     sh 'npm run test'
                 }
             }
