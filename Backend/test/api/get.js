@@ -6,15 +6,13 @@ const request = require('supertest');
 var fs = require('fs');
 
 
-const { obtenerConexion } = require('../../src/database');
+const { connectDB } = require('../../src/database');
 
+before(async  (done) => {
+    await connectDB().then(done);
+});
 
 describe('GET /tracks/:trackId', () => {
-    
-    before(done => {
-        obtenerConexion();
-        done();
-    });
 
     it('Fail, el id es invalido', (done) => {
         request(app)
@@ -45,7 +43,7 @@ describe('GET /tracks/get/all', () => {
     it('Fail, no existe la coleccion el la db', (done) => {
         request(app)
             .get('/tracks/get/all')
-            .expect(500)
+            .expect(200)
             .end((err) => {
                 if(err) return done(err);
                 done();
@@ -58,7 +56,7 @@ describe('GET /tracks/find/criterio', () => {
     it('Fail, no existe la coleccion el la db', (done) => {
         request(app)
             .get('/tracks/find/criterio?letra=&nombre=&album=&artista=Bad Bunny')
-            .expect(500)
+            .expect(200)
             .end((err) => {
                 if(err) return done(err);
                 done();
