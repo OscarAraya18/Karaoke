@@ -9,9 +9,10 @@ pipeline {
         }
         stage('Unit testing'){
             steps {
-                sh '''cd /home/ubuntu/Karaoke/Backend
-                sudo npm i
-                npm run test'''
+                dir('Backend') {
+                    sh 'npm i'
+                    sh 'npm run test'
+                }
             }
         }
         stage('SonarCloud Analysis'){
