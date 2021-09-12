@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Unit testing'){
             steps {
-                dir('Backend') {
+                dir('/home/ubuntu/Karaoke/Backend') {
                     sh 'npm i'
                     sh 'npm run test'
                 }
