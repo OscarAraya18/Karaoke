@@ -9,10 +9,6 @@ const { obtenerConexion } = require('../../src/database');
 
 describe('POST /tracks', () => {
 
-    /*after(done => {
-        obtenerConexion().close();
-      });*/
-
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
 
     it('OK, creando una cancion',  done => {
