@@ -11,7 +11,7 @@ pipeline {
             steps {
                 dir('Backend') {
                     sh 'npm i'
-                    sh 'sudo npm run test'
+                    sh 'npm run test'
                 }
             }
         }
