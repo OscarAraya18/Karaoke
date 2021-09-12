@@ -5,15 +5,11 @@ const app = require('../../src/index');
 const request = require('supertest');
 var fs = require('fs');
 
-
-const { obtenerConexion } = require('../../src/database');
-
-
 describe('POST /tracks', () => {
 
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
 
-    /*it('OK, creando una cancion',  done => {
+    it('OK, creando una cancion',  done => {
         request(app)
             .post('/tracks')
             .attach('track', file)
@@ -26,7 +22,7 @@ describe('POST /tracks', () => {
                 if(err) return done(err);
                 done();
             })
-    });*/
+    });
 
     /*it('Fail, Error subiendo la cancion',  done => {
       request(app)

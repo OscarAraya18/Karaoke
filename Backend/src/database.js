@@ -9,7 +9,7 @@ if (process.env.NODE_ENV == 'test'){
     const Mockgoose = require('mockgoose').Mockgoose;
     const mockgoose = new Mockgoose(mongoose);
     mockgoose.prepareStorage().then(() => {
-        mongoose.connect('mongodb://localhost:1234/test', { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+        mongoose.connect('mongodb://localhost:1234/test', { useNewUrlParser: true}, (err) => {
             if (err) {
                 console.log(err);
                 process.exit(0);

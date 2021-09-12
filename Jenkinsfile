@@ -10,9 +10,7 @@ pipeline {
         stage('Unit testing'){
             steps {
                 dir('Backend') {
-                    sh '''npm i
-                    npm uninstall --save-dev mockgoose
-                    npm install --save-dev mockgoose'''
+                    sh 'npm i'
                     sh 'npm run test'
                 }
             }
