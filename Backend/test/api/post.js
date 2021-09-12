@@ -5,7 +5,13 @@ const app = require('../../src/index');
 const request = require('supertest');
 var fs = require('fs');
 
+const { obtenerConexion } = require('../../src/database');
+
 describe('POST /tracks', () => {
+
+    before(done => {
+        obtenerConexion();
+      });
 
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
 

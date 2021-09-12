@@ -10,6 +10,10 @@ const { obtenerConexion } = require('../../src/database');
 
 
 describe('GET /tracks/:trackId', () => {
+    
+    before(done => {
+        obtenerConexion();
+    });
 
     it('Fail, el id es invalido', (done) => {
         request(app)
