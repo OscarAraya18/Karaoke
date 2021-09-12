@@ -28,7 +28,7 @@ describe('POST /tracks', () => {
             })
     });*/
 
-    it('Fail, Error subiendo la cancion',  done => {
+    /*it('Fail, Error subiendo la cancion',  done => {
       request(app)
           .post('/tracks')
           .attach('track', file)
@@ -42,7 +42,7 @@ describe('POST /tracks', () => {
               if(err) return done(err);
               done();
           })
-  });
+  });*/
 
     it('Fail, se necesitan de todos los campos (incluido el archivo)',  done => {
       request(app)
