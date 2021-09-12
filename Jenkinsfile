@@ -10,7 +10,7 @@ pipeline {
         stage('Unit testing'){
             steps {
                 sh '''cd /home/ubuntu/Karaoke/Backend
-                npm i
+                sudo npm i
                 npm run test'''
             }
         }
