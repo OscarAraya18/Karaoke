@@ -44,7 +44,7 @@ describe('POST /tracks', () => {
           })
   });*/
 
-    it('Fail, se necesitan de todos los campos (incluido el archivo)',  done => {
+    /*it('Fail, se necesitan de todos los campos (incluido el archivo)',  done => {
       request(app)
           .post('/tracks')
           .field('album', "Album test")
@@ -56,5 +56,5 @@ describe('POST /tracks', () => {
                 if(err) return done(err);
                 done();
           });
-    });
+    });*/
 });
