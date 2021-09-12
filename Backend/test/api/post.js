@@ -1,16 +1,20 @@
 process.env.NODE_ENV = 'test';
 
-const expect = require('chai').expect;
 const app = require('../../src/index');
 const request = require('supertest');
 var fs = require('fs');
 
 const { obtenerConexion } = require('../../src/database');
 
+
 describe('POST /tracks', () => {
+    
+  before(function (done) {
+      obtenerConexion();
+      console.log('AAAAAAAAAAAAAAAAAA');
+    });
 
     let file = fs.createReadStream('../Backend/test/api/mp3/test.mp3');
-    obtenerConexion();
 
     it('OK, creando una cancion',  done => {
         request(app)

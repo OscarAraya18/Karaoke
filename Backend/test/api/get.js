@@ -1,16 +1,10 @@
 process.env.NODE_ENV = 'test';
 
-const expect = require('chai').expect;
 const app = require('../../src/index');
 const request = require('supertest');
 var fs = require('fs');
 
-
-const { connectDB } = require('../../src/database');
-
-before(async  (done) => {
-    await connectDB().then(done);
-});
+const { obtenerConexion } = require('../../src/database');
 
 describe('GET /tracks/:trackId', () => {
 
@@ -43,7 +37,7 @@ describe('GET /tracks/get/all', () => {
     it('Fail, no existe la coleccion el la db', (done) => {
         request(app)
             .get('/tracks/get/all')
-            .expect(200)
+            .expect(500)
             .end((err) => {
                 if(err) return done(err);
                 done();
@@ -56,7 +50,20 @@ describe('GET /tracks/find/criterio', () => {
     it('Fail, no existe la coleccion el la db', (done) => {
         request(app)
             .get('/tracks/find/criterio?letra=&nombre=&album=&artista=Bad Bunny')
-            .expect(200)
+            .expect(500)
+            .end((err) => {
+                if(err) return done(err);
+                done();
+            });
+    });
+});
+
+describe('DELETE /tracks/:trackId', () => {
+
+    it('Fail, El id es invalido', (done) => {
+        request(app)
+            .delete('/tracks/1545661dsadfas')
+            .expect(400)
             .end((err) => {
                 if(err) return done(err);
                 done();
