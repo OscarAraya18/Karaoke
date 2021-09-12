@@ -6,7 +6,6 @@ var fs = require('fs');
 
 const { obtenerConexion } = require('../../src/database');
 
-
 describe('POST /tracks', () => {
     
   before(function (done) {

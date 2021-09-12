@@ -134,6 +134,8 @@ const postCancion = (req, res) => {
 };
 
 const deleteCancion = (req, res) => {
+    let idCancion;
+    
     try {
         idCancion = new ObjectId(req.params.trackId);
     } catch (error) {
