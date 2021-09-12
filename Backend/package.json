@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha --recursive --exit --timeout 100000"
+    "test": "mocha test/api/* --exit --timeout 100000"
   },
   "keywords": [],
   "author": "",
