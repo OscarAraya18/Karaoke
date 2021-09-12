@@ -6,19 +6,6 @@ const uri = "mongodb+srv://darksolutions:karaoke@cluster0.bolx4.mongodb.net/trac
 let db;
 
 if (process.env.NODE_ENV == 'test'){
-    const Mockgoose = require('mockgoose').Mockgoose;
-    var mockgoose = new Mockgoose(mongoose);
-    mockgoose.helper.setDbVersion('3.2.1');
-
-    mockgoose.prepareStorage(() => {
-        mongoose.connect('mongodb://localhost:1234/test', { useNewUrlParser: true, connectTimeoutMS: 5000}, (err) => {
-            if (err) {
-                console.log(err);
-                process.exit(0);
-            }
-            console.log('Base de datos de prueba conectada');
-        });
-    });
     db = mongoose.connection;
 }
 else{
