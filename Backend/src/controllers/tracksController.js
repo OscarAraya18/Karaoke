@@ -201,17 +201,17 @@ const buscarCancion = (req, res) => {
 
     if (letra != ''){
         criterio = { $or: [
-            {album: album},
-            {nombre: nombre},
-            {artista: artista},
-            {letra: {$regex : letra} }
+            {album: album.toString()},
+            {nombre: nombre.toString()},
+            {artista: artista.toString()},
+            {letra: {$regex : letra.toString()} }
         ]}
     }
     else{
         criterio = { $or: [
-            {album: album},
-            {nombre: nombre},
-            {artista: artista}
+            {album: album.toString()},
+            {nombre: nombre.toString()},
+            {artista: artista.toString()}
         ]}
     }
 
