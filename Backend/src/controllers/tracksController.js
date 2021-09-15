@@ -216,6 +216,7 @@ const buscarCancion = (req, res) => {
     }
 
     db.collection("metadata").find(criterio, { projection: { _id: 0, letra: 0 } })
+    .collation( { locale: 'en', strength: 2 } )
     .toArray(function(err, result) {
         if (err) {
             console.log(err);
