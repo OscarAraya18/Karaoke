@@ -1,0 +1,20 @@
+@startuml level2
+!include <C4/C4_Container>
+
+Person(personAlias, "Usuario", "Cualquier persona que desee entretenerse")
+System_Ext(login, "Keycloak", "Sistema para la autenticación/autorización de usuarios")
+
+'Se describe el sistema Karaoke
+System_Boundary(c1, "Karaoke") {
+    Container(web_app, "Web Application", "TypeScript y Angular", "Proporciona la interfaz para que el usuario interactúe")
+    Container(api, "REST API", "Node js y Express", "Provee funcionalidades a la aplicacion web mediante peticiones. Además ejecuta operaciones sobre la base de datos")
+    ContainerDb(db, "Base de Datos", "MongoDB", "Mantiene las canciones y su metadata asociada")
+    Rel_L(web_app, api, "Usa", "HTTPS")
+    Rel(api, db, "Lee/Escribe")
+}
+
+'Se hacen las relaciones
+Rel(personAlias, web_app, "Usa", "HTTP")
+Rel_R(web_app, login,  "Utiliza")
+
+@enduml
