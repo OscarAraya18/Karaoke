@@ -1,0 +1,25 @@
+@startuml level3Api
+!include <C4/C4_Container>
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+'se definen sistemas y contenedores
+System_Ext(login, "Keycloak", "Sistema para la autenticación/autorización de usuarios")
+ContainerDb(db, "Base de Datos", "MongoDB", "Mantiene las canciones y su metadata asociada")
+Container(api, "REST API", "Node js y Express", "Provee funcionalidades a la aplicacion web mediante peticiones. Además ejecuta operaciones sobre la base de datos")
+'Se describe el Web App
+Container_Boundary(c2, "Web App") {
+    Component(loginC, "Login", "Angular Component", "Encargado del inicio de sesión.")
+    Component(home, "Home", "Angular Component", "Página principal de la aplicación.")
+    Component(editar, "Editar", "Angular Component", "Contiene funcionalidad para editar y crear una canción.")
+    Component(player, "Player", "Angular Component", "Reproduce las canciones del Karaoke.")
+    Rel_D(loginC, home, "Redirige")
+    Rel(home, player, "Utiliza")
+    Rel(home, editar, "Utiliza")
+}
+
+'se definen las conexiones
+Rel(api, db, "Lee/Escribe")
+Rel_R(loginC, login, "Implementa")
+Rel_R(home, api, "Usa", "HTTP")
+
+@enduml

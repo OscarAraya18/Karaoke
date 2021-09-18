@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="825px" preserveAspectRatio="none" style="width:435px;height:825px;background:#FFFFFF;" version="1.1" viewBox="0 0 435 825" width="435px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ou4xc6cv1b6l" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[8c89f1b40ce0924950dcfda1993469e9]
+cluster WebApp--><rect fill="#FFFFFF" height="812" style="stroke:#000000;stroke-width:1.5;" width="422" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="191" y="23.5332">WebApp</text><!--MD5=[b1ba588ec95fec2697a6a100a3b7d3ce]
+cluster Home--><polygon fill="#FFFFFF" filter="url(#f1ou4xc6cv1b6l)" points="110,214,152,214,159,237.6094,274,237.6094,274,425,110,425,110,214" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="110" x2="159" y1="237.6094" y2="237.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="114" y="230.5332">Home</text><!--MD5=[d2cd6fee76e454991c3d563487ecf6f3]
+cluster Login--><polygon fill="#FFFFFF" filter="url(#f1ou4xc6cv1b6l)" points="112,51,153,51,160,74.6094,272,74.6094,272,165,112,165,112,51" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="112" x2="160" y1="74.6094" y2="74.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="116" y="67.5332">Login</text><!--MD5=[0ba1dcf811818f640fc389b59dfbae80]
+cluster Player--><polygon fill="#FFFFFF" filter="url(#f1ou4xc6cv1b6l)" points="31,474,77,474,84,497.6094,219,497.6094,219,795,31,795,31,474" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="31" x2="84" y1="497.6094" y2="497.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="35" y="490.5332">Player</text><!--MD5=[8c318bc5980d0b645dc74d8ce31d6ec8]
+cluster Editar--><polygon fill="#FFFFFF" filter="url(#f1ou4xc6cv1b6l)" points="243,550,286,550,293,573.6094,405,573.6094,405,719,243,719,243,550" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="243" x2="293" y1="573.6094" y2="573.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="247" y="566.5332">Editar</text><!--MD5=[d8ca94da0354c930ee0f8640914b91ec]
+class HomeComponent--><rect codeLine="6" fill="#FEFECE" filter="url(#f1ou4xc6cv1b6l)" height="158.6875" id="HomeComponent" style="stroke:#A80036;stroke-width:1.5;" width="131" x="126.5" y="250"/><ellipse cx="141.5" cy="266" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M144.2656,261.875 Q144.4219,261.6563 144.6094,261.5469 Q144.7969,261.4375 145.0156,261.4375 Q145.3906,261.4375 145.625,261.7031 Q145.8594,261.9531 145.8594,262.5625 L145.8594,264.0156 Q145.8594,264.625 145.625,264.8906 Q145.3906,265.1563 145.0156,265.1563 Q144.6719,265.1563 144.4688,264.9531 Q144.2656,264.7656 144.1563,264.25 Q144.1094,263.8906 143.9219,263.7031 Q143.5938,263.3281 142.9844,263.1094 Q142.375,262.8906 141.75,262.8906 Q140.9844,262.8906 140.3438,263.2188 Q139.7188,263.5469 139.2188,264.2969 Q138.7344,265.0469 138.7344,266.0781 L138.7344,267.1719 Q138.7344,268.4063 139.625,269.2344 Q140.5156,270.0469 142.1094,270.0469 Q143.0469,270.0469 143.7031,269.7969 Q144.0938,269.6406 144.5156,269.2031 Q144.7813,268.9375 144.9219,268.8594 Q145.0781,268.7813 145.2813,268.7813 Q145.6094,268.7813 145.8594,269.0469 Q146.125,269.2969 146.125,269.6406 Q146.125,269.9844 145.7813,270.3906 Q145.2813,270.9688 144.4844,271.2969 Q143.4063,271.75 142.1094,271.75 Q140.5938,271.75 139.3906,271.125 Q138.4063,270.625 137.7188,269.5625 Q137.0313,268.4844 137.0313,267.2031 L137.0313,266.0469 Q137.0313,264.7188 137.6406,263.5781 Q138.2656,262.4219 139.3594,261.8125 Q140.4531,261.1875 141.6875,261.1875 Q142.4219,261.1875 143.0625,261.3594 Q143.7188,261.5156 144.2656,261.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="155.5" y="270.9102">HomeComponent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="127.5" x2="256.5" y1="282" y2="282"/><ellipse cx="137.5" cy="293" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="146.5" y="297.4189">usuarioPremium</text><ellipse cx="137.5" cy="306.8359" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="146.5" y="311.2549">canciones</text><line style="stroke:#A80036;stroke-width:1.5;" x1="127.5" x2="256.5" y1="317.6719" y2="317.6719"/><ellipse cx="137.5" cy="328.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="146.5" y="333.0908">buscarCancion()</text><ellipse cx="137.5" cy="342.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="146.5" y="346.9268">crearCancion()</text><ellipse cx="137.5" cy="356.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="146.5" y="360.7627">editarCancion()</text><ellipse cx="137.5" cy="370.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="146.5" y="374.5986">eliminarCancion()</text><ellipse cx="137.5" cy="384.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="146.5" y="388.4346">reproducirCancion()</text><ellipse cx="137.5" cy="397.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="146.5" y="402.2705">cerrarSesion()</text><!--MD5=[5ddfab8a21aa2f5c41c27c659be9d5ef]
+class LoginComponent--><rect codeLine="20" fill="#FEFECE" filter="url(#f1ou4xc6cv1b6l)" height="61.8359" id="LoginComponent" style="stroke:#A80036;stroke-width:1.5;" width="128" x="128" y="87"/><ellipse cx="143" cy="103" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M145.7656,98.875 Q145.9219,98.6563 146.1094,98.5469 Q146.2969,98.4375 146.5156,98.4375 Q146.8906,98.4375 147.125,98.7031 Q147.3594,98.9531 147.3594,99.5625 L147.3594,101.0156 Q147.3594,101.625 147.125,101.8906 Q146.8906,102.1563 146.5156,102.1563 Q146.1719,102.1563 145.9688,101.9531 Q145.7656,101.7656 145.6563,101.25 Q145.6094,100.8906 145.4219,100.7031 Q145.0938,100.3281 144.4844,100.1094 Q143.875,99.8906 143.25,99.8906 Q142.4844,99.8906 141.8438,100.2188 Q141.2188,100.5469 140.7188,101.2969 Q140.2344,102.0469 140.2344,103.0781 L140.2344,104.1719 Q140.2344,105.4063 141.125,106.2344 Q142.0156,107.0469 143.6094,107.0469 Q144.5469,107.0469 145.2031,106.7969 Q145.5938,106.6406 146.0156,106.2031 Q146.2813,105.9375 146.4219,105.8594 Q146.5781,105.7813 146.7813,105.7813 Q147.1094,105.7813 147.3594,106.0469 Q147.625,106.2969 147.625,106.6406 Q147.625,106.9844 147.2813,107.3906 Q146.7813,107.9688 145.9844,108.2969 Q144.9063,108.75 143.6094,108.75 Q142.0938,108.75 140.8906,108.125 Q139.9063,107.625 139.2188,106.5625 Q138.5313,105.4844 138.5313,104.2031 L138.5313,103.0469 Q138.5313,101.7188 139.1406,100.5781 Q139.7656,99.4219 140.8594,98.8125 Q141.9531,98.1875 143.1875,98.1875 Q143.9219,98.1875 144.5625,98.3594 Q145.2188,98.5156 145.7656,98.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="96" x="157" y="107.9102">LoginComponent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="129" x2="255" y1="119" y2="119"/><line style="stroke:#A80036;stroke-width:1.5;" x1="129" x2="255" y1="127" y2="127"/><ellipse cx="139" cy="138" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="148" y="142.4189">iniciarSesion()</text><!--MD5=[017ddbe3398fbdbe46267aa56ca29e4e]
+class PlayerComponent--><rect codeLine="26" fill="#FEFECE" filter="url(#f1ou4xc6cv1b6l)" height="269.375" id="PlayerComponent" style="stroke:#A80036;stroke-width:1.5;" width="156" x="47" y="510"/><ellipse cx="73.25" cy="526" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M76.0156,521.875 Q76.1719,521.6563 76.3594,521.5469 Q76.5469,521.4375 76.7656,521.4375 Q77.1406,521.4375 77.375,521.7031 Q77.6094,521.9531 77.6094,522.5625 L77.6094,524.0156 Q77.6094,524.625 77.375,524.8906 Q77.1406,525.1563 76.7656,525.1563 Q76.4219,525.1563 76.2188,524.9531 Q76.0156,524.7656 75.9063,524.25 Q75.8594,523.8906 75.6719,523.7031 Q75.3438,523.3281 74.7344,523.1094 Q74.125,522.8906 73.5,522.8906 Q72.7344,522.8906 72.0938,523.2188 Q71.4688,523.5469 70.9688,524.2969 Q70.4844,525.0469 70.4844,526.0781 L70.4844,527.1719 Q70.4844,528.4063 71.375,529.2344 Q72.2656,530.0469 73.8594,530.0469 Q74.7969,530.0469 75.4531,529.7969 Q75.8438,529.6406 76.2656,529.2031 Q76.5313,528.9375 76.6719,528.8594 Q76.8281,528.7813 77.0313,528.7813 Q77.3594,528.7813 77.6094,529.0469 Q77.875,529.2969 77.875,529.6406 Q77.875,529.9844 77.5313,530.3906 Q77.0313,530.9688 76.2344,531.2969 Q75.1563,531.75 73.8594,531.75 Q72.3438,531.75 71.1406,531.125 Q70.1563,530.625 69.4688,529.5625 Q68.7813,528.4844 68.7813,527.2031 L68.7813,526.0469 Q68.7813,524.7188 69.3906,523.5781 Q70.0156,522.4219 71.1094,521.8125 Q72.2031,521.1875 73.4375,521.1875 Q74.1719,521.1875 74.8125,521.3594 Q75.4688,521.5156 76.0156,521.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="89.75" y="530.9102">PlayerComponent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="48" x2="202" y1="542" y2="542"/><ellipse cx="58" cy="553" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="67" y="557.4189">tiempoTranscurrido</text><ellipse cx="58" cy="566.8359" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="67" y="571.2549">tiempoTransCurridoGrafico</text><ellipse cx="58" cy="580.6719" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="67" y="585.0908">tiempoTotal</text><ellipse cx="58" cy="594.5078" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="41" x="67" y="598.9268">intervalo</text><ellipse cx="58" cy="608.3438" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="67" y="612.7627">intervaloGrafico</text><ellipse cx="58" cy="622.1797" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="67" y="626.5986">reproduciendo</text><ellipse cx="58" cy="636.0156" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="38" x="67" y="640.4346">cancion</text><ellipse cx="58" cy="649.8516" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="67" y="654.2705">letraMostrada</text><ellipse cx="58" cy="663.6875" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="67" y="668.1064">letraSiguiente</text><line style="stroke:#A80036;stroke-width:1.5;" x1="48" x2="202" y1="674.5234" y2="674.5234"/><ellipse cx="58" cy="685.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="67" y="689.9424">transformarLRC()</text><ellipse cx="58" cy="699.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="67" y="703.7783">obtenerAnchoPantalla()</text><ellipse cx="58" cy="713.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="67" y="717.6143">reproducirCancion()</text><ellipse cx="58" cy="727.0313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="67" y="731.4502">pausarCancion()</text><ellipse cx="58" cy="740.8672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="67" y="745.2861">reiniciarCancion()</text><ellipse cx="58" cy="754.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="67" y="759.1221">actualizarLetra()</text><ellipse cx="58" cy="768.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="67" y="772.958">volverAlHome()</text><!--MD5=[3aa845098f3a2d0842cd80fe21250bbb]
+class EditarComponent--><rect codeLine="48" fill="#FEFECE" filter="url(#f1ou4xc6cv1b6l)" height="117.1797" id="EditarComponent" style="stroke:#A80036;stroke-width:1.5;" width="129" x="259.5" y="586"/><ellipse cx="274.5" cy="602" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M277.2656,597.875 Q277.4219,597.6563 277.6094,597.5469 Q277.7969,597.4375 278.0156,597.4375 Q278.3906,597.4375 278.625,597.7031 Q278.8594,597.9531 278.8594,598.5625 L278.8594,600.0156 Q278.8594,600.625 278.625,600.8906 Q278.3906,601.1563 278.0156,601.1563 Q277.6719,601.1563 277.4688,600.9531 Q277.2656,600.7656 277.1563,600.25 Q277.1094,599.8906 276.9219,599.7031 Q276.5938,599.3281 275.9844,599.1094 Q275.375,598.8906 274.75,598.8906 Q273.9844,598.8906 273.3438,599.2188 Q272.7188,599.5469 272.2188,600.2969 Q271.7344,601.0469 271.7344,602.0781 L271.7344,603.1719 Q271.7344,604.4063 272.625,605.2344 Q273.5156,606.0469 275.1094,606.0469 Q276.0469,606.0469 276.7031,605.7969 Q277.0938,605.6406 277.5156,605.2031 Q277.7813,604.9375 277.9219,604.8594 Q278.0781,604.7813 278.2813,604.7813 Q278.6094,604.7813 278.8594,605.0469 Q279.125,605.2969 279.125,605.6406 Q279.125,605.9844 278.7813,606.3906 Q278.2813,606.9688 277.4844,607.2969 Q276.4063,607.75 275.1094,607.75 Q273.5938,607.75 272.3906,607.125 Q271.4063,606.625 270.7188,605.5625 Q270.0313,604.4844 270.0313,603.2031 L270.0313,602.0469 Q270.0313,600.7188 270.6406,599.5781 Q271.2656,598.4219 272.3594,597.8125 Q273.4531,597.1875 274.6875,597.1875 Q275.4219,597.1875 276.0625,597.3594 Q276.7188,597.5156 277.2656,597.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="97" x="288.5" y="606.9102">EditarComponent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="260.5" x2="387.5" y1="618" y2="618"/><ellipse cx="270.5" cy="629" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="8" x="279.5" y="633.4189">id</text><ellipse cx="270.5" cy="642.8359" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="38" x="279.5" y="647.2549">cancion</text><line style="stroke:#A80036;stroke-width:1.5;" x1="260.5" x2="387.5" y1="653.6719" y2="653.6719"/><ellipse cx="270.5" cy="664.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="279.5" y="669.0908">subirAudio()</text><ellipse cx="270.5" cy="678.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74" x="279.5" y="682.9268">editarCancion()</text><ellipse cx="270.5" cy="692.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="279.5" y="696.7627">crearCancion()</text><!--MD5=[4a5283c3cae2641a08b5d18f8a5be0d6]
+link LoginComponent to HomeComponent--><path codeLine="58" d="M192,149.02 C192,173.93 192,210.62 192,244.34 " fill="none" id="LoginComponent-to-HomeComponent" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="192,249.73,196,240.73,192,244.73,188,240.73,192,249.73" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="193" y="194.457">necesita</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="184.2781" y="169.4484">1</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="184.6883" y="239.4326">1</text><!--MD5=[9c91bbf012b0ae66974cf3f3893224e5]
+link HomeComponent to PlayerComponent--><path codeLine="59" d="M175.18,409.08 C168.98,438.04 161.76,471.79 154.75,504.5 " fill="none" id="HomeComponent-to-PlayerComponent" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="153.63,509.74,159.4429,501.7895,154.6874,504.8531,151.6238,500.0976,153.63,509.74" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="167" y="454.457">utiliza</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="166.4338" y="429.0379">1</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="148.0043" y="499.4095">1</text><!--MD5=[4dd559ef55cc3d4af9be8bf85b7bbcae]
+link HomeComponent to EditarComponent--><path codeLine="60" d="M225.14,409.08 C247.56,462.23 276.76,531.49 297.61,580.91 " fill="none" id="HomeComponent-to-EditarComponent" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="299.6,585.63,299.794,575.7831,297.6597,581.0218,292.4209,578.8875,299.6,585.63" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="243" y="454.457">utiliza</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="220.6872" y="429.0379">1</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="289.3741" y="575.408">1</text><!--MD5=[7d263edfdb71be0dc0a9cf21be4312ec]
+@startuml level4web
+!include <C4/C4_Container>
+
+package WebApp <<Rectangle>> {
+
+    package Home {
+        class HomeComponent {
+            +usuarioPremium
+            +canciones
+
+            +buscarCancion()
+            +crearCancion()
+            +editarCancion()
+            +eliminarCancion()
+            +reproducirCancion()
+            +cerrarSesion()
+        }
+    }
+
+    package Login {
+        class LoginComponent {
+            +iniciarSesion()
+        }
+    }
+
+    package Player {
+        class PlayerComponent {
+            +tiempoTranscurrido
+            +tiempoTransCurridoGrafico
+            +tiempoTotal
+            +intervalo
+            +intervaloGrafico
+            +reproduciendo
+            +cancion
+            +letraMostrada
+            +letraSiguiente
+
+            +transformarLRC()
+            +obtenerAnchoPantalla()
+            +reproducirCancion()
+            +pausarCancion()
+            +reiniciarCancion()
+            +actualizarLetra()
+            +volverAlHome()
+        }
+    }
+
+    package Editar {
+        class EditarComponent {
+            +id
+            +cancion
+            
+            +subirAudio()
+            +editarCancion()
+            +crearCancion()
+        }
+    }
+
+    LoginComponent "1" - -> "1" HomeComponent : necesita
+    HomeComponent "1" - -> "1" PlayerComponent : utiliza
+    HomeComponent "1" - -> "1" EditarComponent : utiliza
+}
+
+
+@enduml
+
+@startuml level4web
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontStyle plain
+    BackgroundColor #FFFFFF
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor #FFFFFF
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package WebApp <<Rectangle>> {
+
+    package Home {
+        class HomeComponent {
+            +usuarioPremium
+            +canciones
+
+            +buscarCancion()
+            +crearCancion()
+            +editarCancion()
+            +eliminarCancion()
+            +reproducirCancion()
+            +cerrarSesion()
+        }
+    }
+
+    package Login {
+        class LoginComponent {
+            +iniciarSesion()
+        }
+    }
+
+    package Player {
+        class PlayerComponent {
+            +tiempoTranscurrido
+            +tiempoTransCurridoGrafico
+            +tiempoTotal
+            +intervalo
+            +intervaloGrafico
+            +reproduciendo
+            +cancion
+            +letraMostrada
+            +letraSiguiente
+
+            +transformarLRC()
+            +obtenerAnchoPantalla()
+            +reproducirCancion()
+            +pausarCancion()
+            +reiniciarCancion()
+            +actualizarLetra()
+            +volverAlHome()
+        }
+    }
+
+    package Editar {
+        class EditarComponent {
+            +id
+            +cancion
+            
+            +subirAudio()
+            +editarCancion()
+            +crearCancion()
+        }
+    }
+
+    LoginComponent "1" - -> "1" HomeComponent : necesita
+    HomeComponent "1" - -> "1" PlayerComponent : utiliza
+    HomeComponent "1" - -> "1" EditarComponent : utiliza
+}
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 06:40:07 CST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

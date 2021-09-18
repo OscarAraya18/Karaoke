@@ -1,0 +1,65 @@
+@startuml level4web
+!include <C4/C4_Container>
+
+package WebApp <<Rectangle>> {
+
+    package Home {
+        class HomeComponent {
+            +usuarioPremium
+            +canciones
+
+            +buscarCancion()
+            +crearCancion()
+            +editarCancion()
+            +eliminarCancion()
+            +reproducirCancion()
+            +cerrarSesion()
+        }
+    }
+
+    package Login {
+        class LoginComponent {
+            +iniciarSesion()
+        }
+    }
+
+    package Player {
+        class PlayerComponent {
+            +tiempoTranscurrido
+            +tiempoTransCurridoGrafico
+            +tiempoTotal
+            +intervalo
+            +intervaloGrafico
+            +reproduciendo
+            +cancion
+            +letraMostrada
+            +letraSiguiente
+
+            +transformarLRC()
+            +obtenerAnchoPantalla()
+            +reproducirCancion()
+            +pausarCancion()
+            +reiniciarCancion()
+            +actualizarLetra()
+            +volverAlHome()
+        }
+    }
+
+    package Editar {
+        class EditarComponent {
+            +id
+            +cancion
+            
+            +subirAudio()
+            +editarCancion()
+            +crearCancion()
+        }
+    }
+
+    LoginComponent "1" --> "1" HomeComponent : necesita
+    HomeComponent "1" --> "1" PlayerComponent : utiliza
+    HomeComponent "1" --> "1" EditarComponent : utiliza
+}
+
+
+@enduml
