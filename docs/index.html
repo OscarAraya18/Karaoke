@@ -1,6 +1,105 @@
-<div style="top:0vh; left: 0vw; width: 100vw; position: absolute; background-color: rgb(180, 180, 180);">
+<div style="top:0vh; left: 0vw; width: 100%; position: absolute; background-color: rgb(180, 180, 180); overflow-x: hidden; height: 100%;">
+    
     <img style="display:block;margin-left:auto;margin-right:auto; top: 5vh;height: 30vh;width: 40vw; " src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630547931/Logo.png">
 
-    <h1 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw;">Diagrama según el modelo C4:</h1>
-    <img style="display:block;margin-left:auto;margin-right:auto; top: 5vh;height: 30vh;width: 40vw; " src="">
+    <p style="display:block;margin-left:auto;margin-right:auto; position: relative; font-size: larger; font-family: Arial, Helvetica, sans-serif; width: 55vw; text-align: center;">
+        La presente página contiene la documentación del proyecto Karaoke!, un sistema capaz de reproducir canciones con letra
+        sincronizada para que los usuario canten. Este proyecto fue realizado en setiembre, 2021, por los usuarios:
+    </p>
+
+    <a style="display:block;margin-left:auto;margin-right:auto; position: relative; font-size: large; font-family: Arial, Helvetica, sans-serif; text-align: center;"" href="https://github.com/astuaTEC">Saymon Astúa Madrigal (astuaTEC@github.com)</a>
+    <a style="display:block;margin-left:auto;margin-right:auto; position: relative; font-size: large; font-family: Arial, Helvetica, sans-serif; text-align: center; top: 2vh;"" href="https://github.com/GeraldSalazar">Gerald Salazar Elizondo (GeraldSalazar@github.com)</a>
+    <a style="display:block;margin-left:auto;margin-right:auto; position: relative; font-size: large; font-family: Arial, Helvetica, sans-serif; text-align: center; top: 4vh;"" href="https://github.com/OscarAraya18">Oscar Araya Garbanzo (OscarAraya18@github.com)</a>
+
+    <h1 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 6vh; width: 40vw;">Justificación de decisiones tomadas por el equipo de desarrollo:</h1>
+    
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Lenguaje de programación: JavaScript/TypeScript:</h2>
+
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 7vh;">
+        <li>Los frameworks a utilizar se basan en estos lenguajes de programación.</li>
+        <li>La sintaxis es relativamente sencilla.</li>
+        <li>Existe amplia documentación sobre ambos lenguajes.</li>
+        <li>TypeScript añade tipado al código Javascript, haciéndolo más fácil de leer, escribir y depurar.</li>
+    </ul>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Frameworks/Toolkits:</h2>
+
+    <h3 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">NodeJS:</h3>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 6vh;">
+        <li>Es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome.</li>
+        <li>Necesario para utilizar Express.</li>
+    </ul>
+
+    <h3 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Express:</h3>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 6vh;">
+        <li>Es una infraestructura de aplicaciones web NodeJS mínima y flexible.</li>
+        <li>Proporciona un conjunto sólido de características para las aplicaciones web y móviles.</li>
+        <li>Posee variedad de métodos HTTP a su disposición, además la creación de una API sólida es rápida y sencilla.</li>
+        <li>Análisis del cuerpo de las peticiones HTTP de manera eficiente.</li>
+        <li>Enrutado y mejor organización del código.</li>
+        <li>Es un framework mucho más ligero y eficiente que otros de su tipo (por ejemplo .NET Framework).</li>
+    </ul>
+
+    <h3 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">GridFS:</h3>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 6vh;">
+        <li>Es una API proporcionada por MongoDB para el almacenamiento de archivos, especialmente audio y video.</li>
+        <li>Permite manejar archivos multimedia, incluso de gran tamaño.</li>
+        <li>Permite “descomponer” el contenido en paquetes que se pueden enviar a la aplicación, conforme se van requiriendo.</li>
+        <li>Esto se adapta mejor a la idea de un servicio de streaming.</li>
+    </ul>
+
+    <h3 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Angular:</h3>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 6vh;">
+        <li>Framework versátil que permite crear proyectos web de manera sencilla.</li>
+        <li>Gran soporte de herramientas.</li>
+        <li>Gran cantidad de documentación.</li> 
+        <li>Aplicaciones fáciles de mantener.</li> 
+    </ul>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Tecnología de base de datos: MongoDB:</h2>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 7vh;">
+        <li>MongoDB es una base de datos no relacional orientada a documentos.</li>
+        <li>Los documentos se almacenan en colecciones en formato BSON, una representación binaria de JSON.</li>
+        <li>El sistema requiere de almacenamiento de archivos de tamaño considerable (archivos de audio).</li>
+        <li>Posee el paquete de GridFS, el cual provee características que facilitan la persistencia y recuperación de archivos de audio.</li>
+    </ul>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Estándares de programación: GNOME programming guidelines:</h2>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 7vh;">
+        <li>Es un estándar de programación que tiene como finalidad el facilitar la lectura y escritura de código.</li>
+        <li>El código se mantiene legible aún ante el crecimiento de los proyectos.</li>
+        <li>El estilo de programación de los miembros del equipo se adapta a este estándar.</li>
+    </ul>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Proveedor de servicio en la nube: AWS:</h2>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 7vh;">
+        <li>Amazon Web Services (AWS) es una de las plataformas en la nube más adoptadas y completas en el mundo.</li>
+        <li>Ofrece más de 175 servicios integrales de centros de datos a nivel global.</li>
+        <li>Bajos costos de implementación (gratis para nuestro equipo de desarrollo).</li>
+        <li>Facilidad para la implementación y configuración de máquinas virtuales.</li>
+    </ul>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Organización/layout de los proyectos de código:</h2>
+    <ul style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 4vw; top: 7vh;">
+        <li>El proyecto se divide en dos grandes áreas: Frontend y Backend.</li>
+        <li>El Frontend está formado por cinco componentes de Angular.</li>
+        <li>El Backend está formador por un API construido en Express (rutas y controladores).</li>
+        <li>La base de datos de MongoDB está hosteada en la nube.</li>
+    </ul>
+
+
+    <h1 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 8vh;">Diagramas según el modelo C4:</h1>
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Diagrama de primer nivel:</h2>
+    <img style="left: 5vw; position: relative; top: 5vh;" src="../out/Diagramas/nivel1/level1.svg">
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Diagrama de segundo nivel:</h2>
+    <img style="left: 5vw; position: relative; top: 5vh; overflow-y: hidden;" src="../out/Diagramas/nivel2/level2.svg">
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Diagrama de tercer nivel (API):</h2>
+    <img style="left: 5vw; position: relative; top: 5vh; overflow-y: hidden;" src="../out/Diagramas/nivel3.Api/level3.svg">
+
+    <h2 style="font-family: Arial, Helvetica, sans-serif; position: relative; left: 5vw; top: 7vh;">Diagrama de cuarto nivel (API):</h2>
+    <img style="left: 5vw; position: relative; top: 5vh; overflow-y: hidden;" src="../out/Diagramas/nivel4.Api/level4.svg">
+   
 </div>
