@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { TrackServiceService } from '../../services/track-service.service';
 import {MatDialog} from '@angular/material/dialog';
 import { SiNoPopupComponent } from '../si-no-popup/si-no-popup.component';
 import { EditarPopupComponent } from '../editar-popup/editar-popup.component';
@@ -12,7 +12,7 @@ import { EditarPopupComponent } from '../editar-popup/editar-popup.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  /*
   canciones = [{nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny",
 letra: `
 [00:01.52]Yeah-Yeah-Yeah-Yeah
@@ -79,13 +79,40 @@ letra: `
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"},
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"},
   {nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny"}];
+*/
 
-  constructor(private router:Router, private dialog:MatDialog) { }
+  canciones: any = [];
+
+  constructor(private router:Router, private dialog:MatDialog, private trackservice: TrackServiceService) { }
 
   ngOnInit(): void {
+
+    this.obtenerCancionesHome();
+
+  }
+
+  obtenerCancionesHome(){
+    this.trackservice.obtenerListaCanciones().subscribe(data =>{
+      this.canciones=data;
+      console.log(data);
+    });
   }
 
   buscarCancion(){
+    let nombreCancion = (document.getElementById("nombreCancion") as HTMLInputElement).value;
+    let nombreAlbum = (document.getElementById("nombreAlbum") as HTMLInputElement).value;
+    let nombreArtista = (document.getElementById("nombreArtista") as HTMLInputElement).value;
+    let fragmentoLetra = (document.getElementById("fragmentoLetra") as HTMLInputElement).value;
+    
+
+    if(nombreCancion == '' && nombreAlbum == '' && nombreArtista == '' && fragmentoLetra == ''){
+      this.obtenerCancionesHome();
+    }else {
+      this.trackservice.filtrarCancion(fragmentoLetra, nombreCancion, nombreAlbum, nombreArtista).subscribe(data =>{
+        this.canciones=data;
+        console.log(data);
+      });  
+    }
   }
 
   crearCancion(){
@@ -105,6 +132,8 @@ letra: `
   }
 
   reproducirCancion(indiceCancion:number){
+
+    this.trackservice.songIdToPlay = this.canciones[indiceCancion].cancionId;
     this.router.navigate(['player']);
   }
 
@@ -117,12 +146,32 @@ letra: `
     })
   }
 
-  eliminarCancion(indiceCancion:number){
+  eliminarCancion(indiceCancion:number, idToDelete: string){
+
+    console.log(indiceCancion, idToDelete);
+
     this.dialog.open(SiNoPopupComponent,{
       height:'25vh',
       width:'35vw',
       data:{mensaje:"¿Eliminar la canción "+ this.canciones[indiceCancion].nombre + "?" ,id:2}
+    })
+    .afterClosed()
+    .subscribe((confirmado: Boolean) => {
+      if (confirmado) {
+        console.log('Eliminando: ' + idToDelete);
+        
+        this.trackservice.eliminarCancion(idToDelete).subscribe(data =>{
+
+          this.canciones.splice(indiceCancion, 1);
+          console.log(data);
+          
+        });
+        
+      } else {
+        console.log('Cancelada la eliminación de: ' + idToDelete);
+      }
     });
+
   }
 
 }
