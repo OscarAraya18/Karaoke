@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="621px" preserveAspectRatio="none" style="width:213px;height:621px;background:#FFFFFF;" version="1.1" viewBox="0 0 213 621" width="213px" zoomAndPan="magnify"><defs><filter height="300%" id="f1gryzl8314hb1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[84718c86177bc3232213d0adab70b547]
+cluster REST_API--><rect fill="#FFFFFF" height="608" style="stroke:#000000;stroke-width:1.5;" width="200" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="74" y="23.5332">REST_API</text><!--MD5=[ed1d20ea533a2a0e7df5ba3c35e56ced]
+cluster Controllers--><polygon fill="#FFFFFF" filter="url(#f1gryzl8314hb1)" points="31,51,106,51,113,74.6094,183,74.6094,183,428,31,428,31,51" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="31" x2="113" y1="74.6094" y2="74.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="35" y="67.5332">Controllers</text><!--MD5=[815249f79c2c08157ac02b3106e03757]
+cluster Database--><polygon fill="#FFFFFF" filter="url(#f1gryzl8314hb1)" points="33,477,100,477,107,500.6094,181,500.6094,181,591,33,591,33,477" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="33" x2="107" y1="500.6094" y2="500.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="37" y="493.5332">Database</text><!--MD5=[3befd7237d6ef572d74b0ec2ef2150f7]
+class tracksController--><rect codeLine="6" fill="#FEFECE" filter="url(#f1gryzl8314hb1)" height="144.8516" id="tracksController" style="stroke:#A80036;stroke-width:1.5;" width="119" x="47.5" y="267"/><ellipse cx="62.5" cy="283" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M65.2656,278.875 Q65.4219,278.6563 65.6094,278.5469 Q65.7969,278.4375 66.0156,278.4375 Q66.3906,278.4375 66.625,278.7031 Q66.8594,278.9531 66.8594,279.5625 L66.8594,281.0156 Q66.8594,281.625 66.625,281.8906 Q66.3906,282.1563 66.0156,282.1563 Q65.6719,282.1563 65.4688,281.9531 Q65.2656,281.7656 65.1563,281.25 Q65.1094,280.8906 64.9219,280.7031 Q64.5938,280.3281 63.9844,280.1094 Q63.375,279.8906 62.75,279.8906 Q61.9844,279.8906 61.3438,280.2188 Q60.7188,280.5469 60.2188,281.2969 Q59.7344,282.0469 59.7344,283.0781 L59.7344,284.1719 Q59.7344,285.4063 60.625,286.2344 Q61.5156,287.0469 63.1094,287.0469 Q64.0469,287.0469 64.7031,286.7969 Q65.0938,286.6406 65.5156,286.2031 Q65.7813,285.9375 65.9219,285.8594 Q66.0781,285.7813 66.2813,285.7813 Q66.6094,285.7813 66.8594,286.0469 Q67.125,286.2969 67.125,286.6406 Q67.125,286.9844 66.7813,287.3906 Q66.2813,287.9688 65.4844,288.2969 Q64.4063,288.75 63.1094,288.75 Q61.5938,288.75 60.3906,288.125 Q59.4063,287.625 58.7188,286.5625 Q58.0313,285.4844 58.0313,284.2031 L58.0313,283.0469 Q58.0313,281.7188 58.6406,280.5781 Q59.2656,279.4219 60.3594,278.8125 Q61.4531,278.1875 62.6875,278.1875 Q63.4219,278.1875 64.0625,278.3594 Q64.7188,278.5156 65.2656,278.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="76.5" y="287.9102">tracksController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="48.5" x2="165.5" y1="299" y2="299"/><line style="stroke:#A80036;stroke-width:1.5;" x1="48.5" x2="165.5" y1="307" y2="307"/><ellipse cx="58.5" cy="318" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="67.5" y="322.4189">getCancion()</text><ellipse cx="58.5" cy="331.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="67.5" y="336.2549">getLetra()</text><ellipse cx="58.5" cy="345.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="67.5" y="350.0908">getAllCanciones()</text><ellipse cx="58.5" cy="359.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="68" x="67.5" y="363.9268">postCancion()</text><ellipse cx="58.5" cy="373.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="67.5" y="377.7627">buscarCancion()</text><ellipse cx="58.5" cy="387.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="67.5" y="391.5986">deleteCancion()</text><ellipse cx="58.5" cy="401.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="67.5" y="405.4346">updateCancion()</text><!--MD5=[b8110256c24605ade4fe2963afacc9dc]
+class tracksRoutes--><rect codeLine="16" fill="#FEFECE" filter="url(#f1gryzl8314hb1)" height="103.3438" id="tracksRoutes" style="stroke:#A80036;stroke-width:1.5;" width="105" x="47.5" y="87"/><ellipse cx="62.5" cy="103" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M65.2656,98.875 Q65.4219,98.6563 65.6094,98.5469 Q65.7969,98.4375 66.0156,98.4375 Q66.3906,98.4375 66.625,98.7031 Q66.8594,98.9531 66.8594,99.5625 L66.8594,101.0156 Q66.8594,101.625 66.625,101.8906 Q66.3906,102.1563 66.0156,102.1563 Q65.6719,102.1563 65.4688,101.9531 Q65.2656,101.7656 65.1563,101.25 Q65.1094,100.8906 64.9219,100.7031 Q64.5938,100.3281 63.9844,100.1094 Q63.375,99.8906 62.75,99.8906 Q61.9844,99.8906 61.3438,100.2188 Q60.7188,100.5469 60.2188,101.2969 Q59.7344,102.0469 59.7344,103.0781 L59.7344,104.1719 Q59.7344,105.4063 60.625,106.2344 Q61.5156,107.0469 63.1094,107.0469 Q64.0469,107.0469 64.7031,106.7969 Q65.0938,106.6406 65.5156,106.2031 Q65.7813,105.9375 65.9219,105.8594 Q66.0781,105.7813 66.2813,105.7813 Q66.6094,105.7813 66.8594,106.0469 Q67.125,106.2969 67.125,106.6406 Q67.125,106.9844 66.7813,107.3906 Q66.2813,107.9688 65.4844,108.2969 Q64.4063,108.75 63.1094,108.75 Q61.5938,108.75 60.3906,108.125 Q59.4063,107.625 58.7188,106.5625 Q58.0313,105.4844 58.0313,104.2031 L58.0313,103.0469 Q58.0313,101.7188 58.6406,100.5781 Q59.2656,99.4219 60.3594,98.8125 Q61.4531,98.1875 62.6875,98.1875 Q63.4219,98.1875 64.0625,98.3594 Q64.7188,98.5156 65.2656,98.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="76.5" y="107.9102">tracksRoutes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="48.5" x2="151.5" y1="119" y2="119"/><line style="stroke:#A80036;stroke-width:1.5;" x1="48.5" x2="151.5" y1="127" y2="127"/><polygon fill="#FFFF44" points="58.5,133,62.5,137,58.5,141,54.5,137" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="67.5" y="142.4189">get()</text><polygon fill="#FFFF44" points="58.5,146.8359,62.5,150.8359,58.5,154.8359,54.5,150.8359" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="67.5" y="156.2549">put()</text><polygon fill="#FFFF44" points="58.5,160.6719,62.5,164.6719,58.5,168.6719,54.5,164.6719" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="67.5" y="170.0908">post()</text><polygon fill="#FFFF44" points="58.5,174.5078,62.5,178.5078,58.5,182.5078,54.5,178.5078" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="37" x="67.5" y="183.9268">delete()</text><!--MD5=[6dd357750fb0136eccb22bd541e74502]
+class database--><rect codeLine="25" fill="#FEFECE" filter="url(#f1gryzl8314hb1)" height="61.8359" id="database" style="stroke:#A80036;stroke-width:1.5;" width="116" x="49" y="513"/><ellipse cx="78.4" cy="529" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M81.1656,524.875 Q81.3219,524.6563 81.5094,524.5469 Q81.6969,524.4375 81.9156,524.4375 Q82.2906,524.4375 82.525,524.7031 Q82.7594,524.9531 82.7594,525.5625 L82.7594,527.0156 Q82.7594,527.625 82.525,527.8906 Q82.2906,528.1563 81.9156,528.1563 Q81.5719,528.1563 81.3688,527.9531 Q81.1656,527.7656 81.0563,527.25 Q81.0094,526.8906 80.8219,526.7031 Q80.4938,526.3281 79.8844,526.1094 Q79.275,525.8906 78.65,525.8906 Q77.8844,525.8906 77.2438,526.2188 Q76.6188,526.5469 76.1188,527.2969 Q75.6344,528.0469 75.6344,529.0781 L75.6344,530.1719 Q75.6344,531.4063 76.525,532.2344 Q77.4156,533.0469 79.0094,533.0469 Q79.9469,533.0469 80.6031,532.7969 Q80.9938,532.6406 81.4156,532.2031 Q81.6813,531.9375 81.8219,531.8594 Q81.9781,531.7813 82.1813,531.7813 Q82.5094,531.7813 82.7594,532.0469 Q83.025,532.2969 83.025,532.6406 Q83.025,532.9844 82.6813,533.3906 Q82.1813,533.9688 81.3844,534.2969 Q80.3063,534.75 79.0094,534.75 Q77.4938,534.75 76.2906,534.125 Q75.3063,533.625 74.6188,532.5625 Q73.9313,531.4844 73.9313,530.2031 L73.9313,529.0469 Q73.9313,527.7188 74.5406,526.5781 Q75.1656,525.4219 76.2594,524.8125 Q77.3531,524.1875 78.5875,524.1875 Q79.3219,524.1875 79.9625,524.3594 Q80.6188,524.5156 81.1656,524.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="95.6" y="533.9102">database</text><line style="stroke:#A80036;stroke-width:1.5;" x1="50" x2="164" y1="545" y2="545"/><line style="stroke:#A80036;stroke-width:1.5;" x1="50" x2="164" y1="553" y2="553"/><ellipse cx="60" cy="564" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="69" y="568.4189">obtenerConexion()</text><!--MD5=[1e5ed5f191550b7be72b02b87e6399c2]
+reverse link tracksRoutes to tracksController--><path codeLine="30" d="M102.25,203.48 C102.96,223.68 103.75,246.13 104.48,266.84 " fill="none" id="tracksRoutes-backto-tracksController" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="101.78,190.23,97.9933,196.3669,102.2017,202.2226,105.9884,196.0857,101.78,190.23" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="104" y="233.457">se compone</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="94.5489" y="210.6293">1</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="96.8874" y="256.4182">1</text><!--MD5=[cffbb89c747637c83116f45e540b9c46]
+link tracksController to database--><path codeLine="31" d="M107,412.18 C107,444.6 107,481.47 107,507.78 " fill="none" id="tracksController-to-database" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="107,512.9,111,503.9,107,507.9,103,503.9,107,512.9" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="108" y="457.457">utiliza</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="99.6664" y="432.2907">1</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="7" x="99.2781" y="502.4224">1</text><!--MD5=[8589b594276fe1e684483d7f447a20de]
+@startuml level4
+!include <C4/C4_Container>
+
+package REST_API <<Rectangle>> {
+
+    package Controllers {
+        class tracksController {
+            +getCancion()
+            +getLetra()
+            +getAllCanciones()
+            +postCancion()
+            +buscarCancion()
+            +deleteCancion()
+            +updateCancion()
+        }
+
+        class tracksRoutes {
+            #get()
+            #put()
+            #post()
+            #delete()
+        }
+    }
+
+    package Database {
+        class database {
+            +obtenerConexion()
+        }
+    }
+
+    tracksRoutes "1" *- - "1" tracksController : se compone
+    tracksController "1" - -> "1" database : utiliza
+
+}
+
+
+@enduml
+
+@startuml level4
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontStyle plain
+    BackgroundColor #FFFFFF
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor #FFFFFF
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package REST_API <<Rectangle>> {
+
+    package Controllers {
+        class tracksController {
+            +getCancion()
+            +getLetra()
+            +getAllCanciones()
+            +postCancion()
+            +buscarCancion()
+            +deleteCancion()
+            +updateCancion()
+        }
+
+        class tracksRoutes {
+            #get()
+            #put()
+            #post()
+            #delete()
+        }
+    }
+
+    package Database {
+        class database {
+            +obtenerConexion()
+        }
+    }
+
+    tracksRoutes "1" *- - "1" tracksController : se compone
+    tracksController "1" - -> "1" database : utiliza
+
+}
+
+
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 06:40:07 CST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>
