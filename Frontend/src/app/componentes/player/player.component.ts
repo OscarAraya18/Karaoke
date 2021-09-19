@@ -1,9 +1,11 @@
 import { LEADING_TRIVIA_CHARS } from '@angular/compiler/src/render3/view/template';
+import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
 import { Router } from '@angular/router';
 import { TrackServiceService } from 'src/app/services/track-service.service';
 import { threadId } from 'worker_threads';
+
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
@@ -53,29 +55,35 @@ export class PlayerComponent implements OnInit {
       this.letraCancionLRC = data.letra;
       this.nombreCancion = data.nombre;
 
-      this.audioCancion = new Audio();
-      this.audioCancion.src = "http://localhost:4000/tracks/"+this.cancionId;
-      this.audioCancion.load();
-
-      this.transformarLRC();
+      //this.audioCancion = new Audio();
+      //this.audioCancion.src = "http://localhost:4000/tracks/"+this.cancionId;
+      //this.audioCancion.load();
+      this.play("http://localhost:4000/tracks/"+this.cancionId).then((res) => {
+        //this.audioCancion = res;
+        this.transformarLRC();
+      }).catch((err) => {
+        console.log(err.message);
+      });
 
     });
 
-    //console.log(this.letraCancionLRC, 'u');
+  }
 
+  play(url: string) {
+    return new Promise((resolve, reject) => { // return a promise
+      this.audioCancion = new Audio(); 
+      //audio.preload = "auto";                      // intend to play through
+      //audio.autoplay = true;                       // autoplay when loaded
+      this.audioCancion.onerror = reject;                      // on error, reject
+      //audio.onended = resolve;                     // when done, resolve
+      //this.audioCancion.onplay = resolve;
+      this.audioCancion.src = url;
+      this.audioCancion.load();
+      resolve('');
+      
+      //this.audioCancion.load();
 
-    /*this.audioCancion.addEventListener('loadedmetadata', function(this: any){
-      // Obtain the duration in seconds of the audio file (with milliseconds as well, a float value)
-      var duration = this.audioCancion.duration;
-  
-      // example 12.3234 seconds
-      console.log("The duration of the song is of: " + duration + " seconds");
-      // Alternatively, just display the integer value with
-      // parseInt(duration)
-      // 12 seconds
-    },false);*/
-    //this.audioCancion.load();
-
+    });
   }
 
   transformarLRC(){
@@ -91,7 +99,7 @@ export class PlayerComponent implements OnInit {
         linea = ""
       }
     }
-    //console.log(this.letraCancion);
+    console.log(this.letraCancion);
   }
 
 
