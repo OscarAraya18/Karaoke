@@ -1,4 +1,8 @@
 <div class="container upperContainer">
+
+    <div class="loader" *ngIf="cargando"></div>
+    <div class="lyric" *ngIf="cargando">Estamos cargando tu canción. Por favor espera...</div>
+
     <h1 class="lyric">{{letraMostrada}}</h1>
     <h1 class="nextLyric">{{letraSiguiente}}</h1>
 
