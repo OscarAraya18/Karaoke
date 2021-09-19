@@ -1,7 +1,7 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router, RouterModule } from '@angular/router';
-
 @Component({
   selector: 'app-si-no-popup',
   templateUrl: './si-no-popup.component.html',
@@ -11,7 +11,7 @@ export class SiNoPopupComponent implements OnInit {
   mensaje = "";
   id = 0;
 
-  constructor(private router:Router, private dialog:MatDialog, @Inject(MAT_DIALOG_DATA) private data:any) { }
+  constructor(private router:Router, public dialog: MatDialogRef<SiNoPopupComponent>, @Inject(MAT_DIALOG_DATA) private data:any) { }
 
   ngOnInit(): void {
     this.mensaje = this.data.mensaje;
@@ -22,16 +22,12 @@ export class SiNoPopupComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  eliminarCancion(){
-    
+  aceptar(): void{
+    this.dialog.close(true);
   }
 
-  editarCancion(){
-    this.dialog.closeAll();
-  }
-
-  crearCancion(){
-    this.dialog.closeAll();
+  cerrar(): void{
+    this.dialog.close(false);
   }
 
 }
