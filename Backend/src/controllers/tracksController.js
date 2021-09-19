@@ -74,10 +74,10 @@ const postCancion = (req, res) => {
     const upload = multer({
         storage,
         limits: {
-            fields: 4,
+            fields: 5,
             fileSize: 8000000,
             files: 1,
-            parts: 5
+            parts: 6
         }
     });
     upload.single('track')(req, res, (err) => {
@@ -86,7 +86,7 @@ const postCancion = (req, res) => {
             return res.status(400).json({message: err.message});
         }
         else if (!req.body.name || !req.body.album ||
-            !req.body.artista || !req.body.letra){
+            !req.body.artista || !req.body.letra || !req.body.duracion ){
             return res.status(400).json({message: "Faltaron atributos para la cancion"});
         }
         
@@ -94,6 +94,7 @@ const postCancion = (req, res) => {
         let album = req.body.album;
         let artista = req.body.artista;
         let letra = req.body.letra;
+        let duracion = req.body.duracion 
 
         const readableTrackStream = new Readable();
         readableTrackStream.push(req.file.buffer);
@@ -113,7 +114,8 @@ const postCancion = (req, res) => {
             nombre: nombreCancion,
             album: album,
             artista: artista,
-            letra: letra
+            letra: letra,
+            duracion: duracion
         };
 
         uploadStream.on('error', () => {
