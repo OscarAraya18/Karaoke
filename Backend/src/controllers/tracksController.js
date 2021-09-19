@@ -206,7 +206,7 @@ const buscarCancion = (req, res) => {
             {album: album.toString()},
             {nombre: nombre.toString()},
             {artista: artista.toString()},
-            {letra: {$regex : letra.toString()} }
+            {letra: {$regex : letra.toString(), "$options" : "i"} }
         ]}
     }
     else{
