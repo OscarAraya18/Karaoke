@@ -4,7 +4,15 @@ pipeline {
     stages {
         stage('Git repo'){
             steps{
-                git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke/'
+                git branch: 'main', url: 'https://github.com/OscarAraya18/Karaoke.git'
+            }
+        }
+        stage('Unit testing'){
+            steps {
+                dir('Backend') {
+                    sh 'npm i'
+                    sh 'npm run test'
+                }
             }
         }
         stage('SonarCloud Analysis'){
@@ -23,12 +31,12 @@ pipeline {
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'Solution', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd Karaoke
                 git pull https://github.com/OscarAraya18/Karaoke
                 cd Backend
-                npm start &
-                ^C
+                npm i
                 cd ..
                 cd Frontend
-                ng serve --host 0.0.0.0 --port 3000
-                ^C''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                npm i
+                pm2 restart all
+                cd''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
     }

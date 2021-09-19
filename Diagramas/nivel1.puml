@@ -1,0 +1,13 @@
+@startuml level1
+!include <C4/C4_Container>
+
+'Se define el contexto
+Person(personAlias, "Usuario", "Cualquier persona que desee entretenerse")
+System(karaoke, "Karaoke", "Aplicacion web para Karaoke")
+System_Ext(login, "Keycloak", "Sistema para la autenticación/autorización de usuarios")
+
+'Se hacen las relaciones
+Rel(personAlias, karaoke, "Utiliza", "HTTP")
+Rel_R(karaoke, login,  "Implementa")
+
+@enduml

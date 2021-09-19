@@ -16,8 +16,13 @@ app.use(morgan('dev'));
 //rutas
 app.use(trackRoutes);
 
+app.get('/hello', (req, res) => {
+    res.send('Hello World!')
+  })
+
 // inicializando el servidor en http
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
 });
 
+module.exports = app;

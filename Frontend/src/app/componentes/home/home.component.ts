@@ -12,7 +12,13 @@ import { EditarPopupComponent } from '../editar-popup/editar-popup.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+<<<<<<< HEAD
   /*
+=======
+
+  usuarioPremium = true;
+
+>>>>>>> f4a6936f60dae4b5832ed471a2793b1eee2e4fb2
   canciones = [{nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny",
 letra: `
 [00:01.52]Yeah-Yeah-Yeah-Yeah

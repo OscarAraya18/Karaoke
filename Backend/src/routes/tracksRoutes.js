@@ -11,7 +11,7 @@ const {getCancion, postCancion,
 
 router.get('/tracks/:trackId', getCancion);
 
-router.post('/tracks', postCancion);
+router.post('/tracks', jsonParser, postCancion);
 
 router.get('/tracks/get/all', getAllCanciones);
 

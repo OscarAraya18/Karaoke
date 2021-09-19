@@ -121,7 +121,6 @@ const postCancion = (req, res) => {
         });
 
         uploadStream.on('finish', () => {
-            
             db.collection("metadata").insertOne(myObject, (err, res) => {
                 if (err) {
                     return res.status(400).json({ message: "Error subiendo la metadata" });
@@ -135,6 +134,8 @@ const postCancion = (req, res) => {
 };
 
 const deleteCancion = (req, res) => {
+    let idCancion;
+    
     try {
         idCancion = new ObjectId(req.params.trackId);
     } catch (error) {
@@ -200,21 +201,22 @@ const buscarCancion = (req, res) => {
 
     if (letra != ''){
         criterio = { $or: [
-            {album: album},
-            {nombre: nombre},
-            {artista: artista},
-            {letra: {$regex : letra} }
+            {album: album.toString()},
+            {nombre: nombre.toString()},
+            {artista: artista.toString()},
+            {letra: {$regex : letra.toString()} }
         ]}
     }
     else{
         criterio = { $or: [
-            {album: album},
-            {nombre: nombre},
-            {artista: artista}
+            {album: album.toString()},
+            {nombre: nombre.toString()},
+            {artista: artista.toString()}
         ]}
     }
 
     db.collection("metadata").find(criterio, { projection: { _id: 0, letra: 0 } })
+    .collation( { locale: 'en', strength: 2 } )
     .toArray(function(err, result) {
         if (err) {
             console.log(err);
