@@ -75,7 +75,7 @@ const postCancion = (req, res) => {
         storage,
         limits: {
             fields: 4,
-            fileSize: 10000000,
+            fileSize: 8000000,
             files: 1,
             parts: 5
         }
