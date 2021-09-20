@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,18 @@ export class TrackServiceService {
 
   songIdToPlay: string = '';
 
+
   obtenerListaCanciones(){
+    const httpOptions = {
+      headers: new HttpHeaders({ 
+        'Access-Control-Allow-Origin':'*',
+        'Authorization':'authkey',
+        'userid':'1'
+      })
+    };
     const method = 'tracks/get/all';
     
-    return this.http.get(this.address + method);
+    return this.http.get(this.address + method, httpOptions);
   }
 
   obtenerAudio(id: string){
