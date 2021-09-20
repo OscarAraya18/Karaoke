@@ -4,7 +4,7 @@ export function initializeKeycloak(keycloak: KeycloakService): () => Promise<boo
     return () =>
       keycloak.init({
         config: {
-          url: 'http://3.144.7.110:8080/auth/',
+          url: 'http://localhost:8080/auth/',
           realm: 'angular-karaoke',
           clientId: 'karaoke-client',
         },
