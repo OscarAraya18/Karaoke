@@ -147,7 +147,7 @@ letra: `
     .afterClosed()
     .subscribe((confirmado: Boolean) => {
       if (confirmado) {
-        this.keycloakService.logout("http://localhost:4200/");
+        this.keycloakService.logout("http://3.144.7.110:4200/");
       } else {
         console.log('Error al cerrar sesión: ');
       }
