@@ -16,17 +16,19 @@ export class PlayerComponent implements OnInit {
   tiempoTranscurrido: number = 0;
   tiempoTranscurridoGrafico: number = 0;
   tiempoTranscurridoMinutos: String = "00:00.00";
-  tiempoTotalMinutos: String = "02:51.50";
+  tiempoTotalMinutos: String = "00:00.00";
 
   interval : any;
   intervaloGrafico : any;
 
   reproduciendo: boolean = false;
 
+  cargando = true;
+
   nombreCancion = "";
   cancionId: string = '';
 
-  segundosCancion = 171;
+  segundosCancion = 0;
   audioCancion: any;
 
   letraCancionLRC = '';
@@ -55,13 +57,8 @@ export class PlayerComponent implements OnInit {
       this.letraCancionLRC = data.letra;
       this.nombreCancion = data.nombre;
 
-      //this.audioCancion = new Audio();
-      //this.audioCancion.src = "http://localhost:4000/tracks/"+this.cancionId;
-      //this.audioCancion.load();
+
       this.play("http://localhost:4000/tracks/"+this.cancionId).then((res) => {
-        //this.audioCancion = res;
-        this.transformarLRC();
-        this.reproducirCancion();
       }).catch((err) => {
         console.log(err.message);
       });
@@ -69,20 +66,52 @@ export class PlayerComponent implements OnInit {
     });
 
   }
+  
+
+  flag = true;
 
   play(url: string) {
-    return new Promise((resolve, reject) => { // return a promise
-      this.audioCancion = new Audio(); 
-      //audio.preload = "auto";                      // intend to play through
-      //audio.autoplay = true;                       // autoplay when loaded
-      this.audioCancion.onerror = reject;                      // on error, reject
-      //audio.onended = resolve;                     // when done, resolve
+    return new Promise(async (resolve, reject) => {
+      this.audioCancion = new Audio();
+
+      
+      this.audioCancion.addEventListener("ended", () => {
+        clearInterval(this.interval);
+        this.segundosCancion = this.tiempoTranscurrido*15+3;
+
+        this.tiempoTotalMinutos = new Date(this.segundosCancion*1000).toISOString().substring(14,22);
+
+        this.tiempoTranscurrido = 0;
+        console.log(this.segundosCancion);
+        this.audioCancion.playbackRate = 1;
+        this.audioCancion.volume = 1;
+
+        this.cargando = false;
+
+        this.transformarLRC();
+        this.reproducirCancion();
+      });
+
+      this.audioCancion.preload = "none";
+      this.audioCancion.onerror = reject;                    
       this.audioCancion.src = url;
       this.audioCancion.load();
+      this.audioCancion.playbackRate = 15;
+      this.audioCancion.volume = 0;
+      await this.audioCancion.play();
+      
+      this.interval = setInterval(() => {
+        if(this.flag){
+          this.tiempoTranscurrido++;
+        }
+      },1000)
+
       resolve('');
-      //this.audioCancion.load();
 
     });
+  }
+
+  obtenerTiempoCancion(){
   }
 
   transformarLRC(){
@@ -98,7 +127,6 @@ export class PlayerComponent implements OnInit {
         linea = ""
       }
     }
-    console.log(this.letraCancion);
   }
 
 
@@ -109,8 +137,10 @@ export class PlayerComponent implements OnInit {
     
 
   reproducirCancion() {
-    this.reproduciendo = true;
     this.audioCancion.play();
+
+    this.reproduciendo = true;
+
 
     this.interval = setInterval(() => {
       if(this.tiempoTranscurrido<this.segundosCancion){
@@ -136,7 +166,6 @@ export class PlayerComponent implements OnInit {
   }
 
   actualizarLetra(){
-    console.log(this.letraCancion)
     let i = 0;
     for(var fragmentoLetra of this.letraCancion){
       if(fragmentoLetra.tiempo == this.tiempoTranscurridoMinutos){
