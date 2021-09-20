@@ -77,7 +77,7 @@ export class PlayerComponent implements OnInit {
       
       this.audioCancion.addEventListener("ended", () => {
         clearInterval(this.interval);
-        this.segundosCancion = this.tiempoTranscurrido*15+5;
+        this.segundosCancion = this.tiempoTranscurrido*15+10;
 
         this.tiempoTotalMinutos = new Date(this.segundosCancion*1000).toISOString().substring(14,22);
 
