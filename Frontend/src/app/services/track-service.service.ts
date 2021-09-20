@@ -17,8 +17,6 @@ export class TrackServiceService {
     const httpOptions = {
       headers: new HttpHeaders({ 
         'Access-Control-Allow-Origin':'*',
-        'Authorization':'authkey',
-        'userid':'1'
       })
     };
     const method = 'tracks/get/all';
