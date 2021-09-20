@@ -5,6 +5,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { SiNoPopupComponent } from '../si-no-popup/si-no-popup.component';
 import { EditarPopupComponent } from '../editar-popup/editar-popup.component';
 //import { SiNoPopupComponent } from '../si-no-popup/si-no-popup.component';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ import { EditarPopupComponent } from '../editar-popup/editar-popup.component';
 
 export class HomeComponent implements OnInit {
 
-  usuarioPremium = true;
+  usuarioPremium: any;
 
   /*canciones = [{nombre:"Yonaguni",album:"El Ultimo Tour del Mundo",artista:"Bad Bunny",
 letra: `
@@ -85,13 +86,24 @@ letra: `
 
 
   canciones: any = [];
+  token: any;
+  refreshToken: any;
 
-  constructor(private router:Router, private dialog:MatDialog, private trackservice: TrackServiceService) { }
+  constructor(private router:Router, private dialog:MatDialog, private trackservice: TrackServiceService, private keycloakService: KeycloakService) { }
 
   ngOnInit(): void {
 
+    this.inicializarCredenciales();
     this.obtenerCancionesHome();
 
+  }
+
+  async inicializarCredenciales(){
+    this.token = await this.keycloakService.getToken();
+    this.refreshToken = this.keycloakService.getKeycloakInstance().refreshToken
+    let userDetails:any = await this.keycloakService.loadUserProfile();
+
+    this.usuarioPremium = (userDetails.attributes.premium[0] == "true");
   }
 
   obtenerCancionesHome(){
@@ -131,6 +143,14 @@ letra: `
       height:'25vh',
       width:'25vw',
       data:{mensaje:"¿Cerrar la sesión?",id:1}
+    })
+    .afterClosed()
+    .subscribe((confirmado: Boolean) => {
+      if (confirmado) {
+        this.keycloakService.logout("http://localhost:4200/");
+      } else {
+        console.log('Error al cerrar sesión: ');
+      }
     });
   }
 

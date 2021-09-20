@@ -10,7 +10,7 @@
         Buscar canción
     </button>
 
-    <img class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/plus.png" (click)="crearCancion()">
+    <img *ngIf="usuarioPremium" class="icon" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/plus.png" (click)="crearCancion()">
     <img class="icon2" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549778/CE5508/logout.png" (click)="cerrarSesion()">
 </div>
 
@@ -26,9 +26,6 @@
         
         <img *ngIf="usuarioPremium" class="songIcon2" style="left: 90vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/editar.png" (click)="editarCancion(i)">
         <img *ngIf="usuarioPremium" class="songIcon2" style="left: 94vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/trash.png" (click)="eliminarCancion(i, cancion.cancionId)">
-
-        <img class="songIcon2" style="left: 90vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/editar.png" (click)="editarCancion(i)">
-        <img class="songIcon2" style="left: 94vw;" src="https://res.cloudinary.com/dfionqbqe/image/upload/v1630549779/CE5508/trash.png" (click)="eliminarCancion(i, cancion.cancionId)">
 
     </div>
 

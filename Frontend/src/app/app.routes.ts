@@ -5,10 +5,10 @@ import { LoginComponent } from './componentes/login/login.component';
 import { PlayerComponent } from './componentes/player/player.component';
 import { EditarPopupComponent } from './componentes/editar-popup/editar-popup.component';
 import { SiNoPopupComponent } from './componentes/si-no-popup/si-no-popup.component';
-
+import { AuthGuard } from './keycloak/app.guard';
 
 const routes: Routes = [
-  { path: '', component:LoginComponent},
+  { path: '', component:HomeComponent, canActivate: [AuthGuard]},
   { path: 'home', component:HomeComponent},
   { path: 'player', component:PlayerComponent},
   { path: 'editarCrear', component:EditarPopupComponent},
