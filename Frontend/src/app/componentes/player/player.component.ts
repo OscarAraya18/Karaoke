@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
 import { Router } from '@angular/router';
 import { TrackServiceService } from 'src/app/services/track-service.service';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-player',
