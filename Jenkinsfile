@@ -12,6 +12,7 @@ pipeline {
                 dir('Backend') {
                     sh 'npm i'
                     sh 'npm run test'
+                    sh 'cd ..'
                 }
                 dir('Frontend') {
                     sh 'npm i'
