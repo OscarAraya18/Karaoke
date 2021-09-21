@@ -14,9 +14,14 @@ export class TrackServiceService {
 
 
   obtenerListaCanciones(){
+    const httpOptions = {
+      headers: new HttpHeaders({ 
+        'Access-Control-Allow-Origin':'*',
+      })
+    };
     const method = 'tracks/get/all';
     
-    return this.http.get(this.address + method);
+    return this.http.get(this.address + method, httpOptions);
   }
 
   obtenerAudio(id: string){
@@ -46,6 +51,7 @@ export class TrackServiceService {
 
   agregarCancion(data: any){
     const method = 'tracks';
+
     return this.http.post(this.address + method, data);
   }
 
