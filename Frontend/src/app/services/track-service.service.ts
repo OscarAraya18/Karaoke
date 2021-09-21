@@ -51,8 +51,13 @@ export class TrackServiceService {
 
   agregarCancion(data: any){
     const method = 'tracks';
+    const httpOptions = {
+      headers: new HttpHeaders({ 
+        'Access-Control-Allow-Origin':'*',
+      })
+    };
 
-    return this.http.post(this.address + method, data);
+    return this.http.post(this.address + method, data, httpOptions);
   }
 
   actualizarCancion(id: string, data: any){
