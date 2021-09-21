@@ -13,7 +13,7 @@ pipeline {
                     sh 'npm i'
                     sh 'npm run test'
                 }
-                dir('Fronend') {
+                dir('Frontend') {
                     sh 'npm i'
                     sh 'ng test -- --watch=false'
                 }
