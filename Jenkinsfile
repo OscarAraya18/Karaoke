@@ -15,7 +15,7 @@ pipeline {
                 }
                 dir('Frontend') {
                     sh 'npm i'
-                    sh 'ng test -- --watch=false'
+                    sh 'ng test -- --watch=false --browsers ChromeHeadless'
                 }
             }
         }
