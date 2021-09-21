@@ -57,8 +57,13 @@ export class TrackServiceService {
 
   actualizarCancion(id: string, data: any){
     const method = 'tracks/';
+    const httpOptions = {
+      headers: new HttpHeaders({ 
+        'Access-Control-Allow-Origin':'*',
+      })
+    };
 
-    return this.http.put(this.address + method + id, data);
+    return this.http.put(this.address + method + id, data, httpOptions);
   }
 
   eliminarCancion(id: string){

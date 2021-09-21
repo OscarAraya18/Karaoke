@@ -92,9 +92,9 @@ export class EditarPopupComponent implements OnInit {
     let inputLetra = (document.getElementById("letraCancion") as HTMLInputElement).value;
 
 
-    var form: any = new FormData();
+    //var form: any = new FormData();
     
-    //var form = new FormData();
+    var form = new FormData();
     form.append('letra', inputLetra);
     form.append('album', nombreAlbum);
     form.append('name', nombreCancion);
