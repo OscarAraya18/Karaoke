@@ -3,6 +3,12 @@ const { obtenerConexion } = require('../database');
 const { GridFSBucket, ObjectId } = require('mongodb');
 const { Readable } = require('stream');
 
+/**
+ * Metodo para acceder a una canción específica
+ * @param {*} req solicitud entrante donde se indica el Id
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok con el audio en caso exitoso / un 400 en caso de error
+ */
 const getCancion = (req, res) => {
     let idCancion;
 
@@ -35,14 +41,23 @@ const getCancion = (req, res) => {
     });
 };
 
+/**
+ * Funcion para obtener una letra es
+ * @param {*} req solicitud entrante donde se indica el Id
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok con la letra en caso exitoso / un 400 en caso contrario.
+ */
 const getLetra = (req, res) => {
     let idCancion;
 
+    // se verifica si lo ingresado pertenece a un
+    // id de mongoDb
     try {
         idCancion = new ObjectId(req.params.trackId);
     } catch (error) {
         return res.status(400).json({message: "Id invalido en la URL"})
     }
+
     const db = obtenerConexion();
     db.collection("metadata").findOne({cancionId: idCancion}, 
         { projection: { _id: 0, album: 0, artista: 0 } }
@@ -55,6 +70,12 @@ const getLetra = (req, res) => {
       });
 };
 
+/**
+ * Método para acceder un máximo de 20 canciones de la base de datos
+ * @param {*} req solicitud entrante
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok con las canciones en caso exitoso / un 400 en caso contrario.
+ */
 const getAllCanciones = (req, res) => {
     const db = obtenerConexion();
     
@@ -68,7 +89,12 @@ const getAllCanciones = (req, res) => {
       });
 };
 
-
+/**
+ * Metodo para guardar una cancion en la base de datos
+ * @param {*} req solicitud entrante de donde se accede el cuerpo de la petición
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok en caso exitoso / un 400 o 500 en caso contrario.
+ */
 const postCancion = (req, res) => {
     const storage = multer.memoryStorage();
     const upload = multer({
@@ -80,6 +106,8 @@ const postCancion = (req, res) => {
             parts: 5
         }
     });
+
+    //se trata de subir el archivo
     upload.single('track')(req, res, (err) => {
         if(err){
             console.log(err);
@@ -90,6 +118,7 @@ const postCancion = (req, res) => {
             return res.status(400).json({message: "Faltaron atributos para la cancion"});
         }
         
+        //se acceden los atributos del cuerpo de la canción
         let nombreCancion = req.body.name;
         let album = req.body.album;
         let artista = req.body.artista;
@@ -99,11 +128,13 @@ const postCancion = (req, res) => {
         readableTrackStream.push(req.file.buffer);
         readableTrackStream.push(null);
 
+        //se conecta a la base de datos
         const db = obtenerConexion();
         const bucket = new GridFSBucket(db, {
             bucketName: 'canciones'
         });
 
+        //se comienza la subida del audio
         let uploadStream = bucket.openUploadStream(nombreCancion);
         const id = uploadStream.id;
         readableTrackStream.pipe(uploadStream);
@@ -116,11 +147,14 @@ const postCancion = (req, res) => {
             letra: letra
         };
 
+        //se verifica si existe un error subiendo el archivo
         uploadStream.on('error', () => {
             return res.status(500).json({ message: "Error subiendo el archivo" });
         });
 
+        // cuando se finaliza la subida del audio
         uploadStream.on('finish', () => {
+            // se inserta la metadata asociada en la base de datos
             db.collection("metadata").insertOne(myObject, (err, res) => {
                 if (err) {
                     return res.status(400).json({ message: "Error subiendo la metadata" });
@@ -133,8 +167,15 @@ const postCancion = (req, res) => {
     });
 };
 
+/**
+ * Método para eliminar una canción
+ * @param {*} req solicitud entrante de donde se accede al Id
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok en caso exitoso / un 400 caso contrario.
+ */
 const deleteCancion = (req, res) => {
     let idCancion;
+    
     
     try {
         idCancion = new ObjectId(req.params.trackId);
@@ -171,15 +212,24 @@ const deleteCancion = (req, res) => {
 
 };
 
+/**
+ * Método para actualizar la metadata de una canción
+ * @param {*} req solicitud entrante de donde se accede al body
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok en caso exitoso / un 400 caso contrario.
+ */
 const updateCancion = (req, res) => {
     let idCancion;
 
+    // se verifica si lo ingresado pertenece a un
+    // id de mongoDb
     try {
         idCancion = new ObjectId(req.params.trackId);
     } catch (error) {
         return res.status(400).json({message: "Id invalido en la URL"})
     }
 
+    // se obtiene la conexion con la base de datos
     var db = obtenerConexion();
     var newvalues = { $set: req.body};
     
@@ -192,13 +242,21 @@ const updateCancion = (req, res) => {
       });
 };
 
+/**
+ * Metodo para buscar canciones mediante un filtrado
+ * @param {*} req solicitud entrante de donde se accede al body
+ * @param {*} res respuesta saliente
+ * @returns un 200 ok en caso exitoso / un 400 caso contrario.
+ */
 const buscarCancion = (req, res) => {
     var {letra, nombre, album, artista} = req.query;
 
+    // se conecta a la base de datos
     const db = obtenerConexion();
 
     let criterio;
 
+    //si la letra es NO vacía se aplica el siguiente criterio
     if (letra != ''){
         criterio = { $or: [
             {album: album.toString()},
@@ -206,7 +264,7 @@ const buscarCancion = (req, res) => {
             {artista: artista.toString()},
             {letra: {$regex : letra.toString(), "$options" : "i"} }
         ]}
-    }
+    } // si es vacía, entonces se aplica el siguiente criterio
     else{
         criterio = { $or: [
             {album: album.toString()},

@@ -5,9 +5,10 @@ const uri = "mongodb+srv://darksolutions:karaoke@cluster0.bolx4.mongodb.net/trac
 
 let db;
 
+// en caso de que la base de datos se necesite para tests
 if (process.env.NODE_ENV == 'test'){
     db = mongoose.connection;
-}
+}//sino, se conecta a la base de datos alojada en la nube
 else{
     MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
         if (err) {

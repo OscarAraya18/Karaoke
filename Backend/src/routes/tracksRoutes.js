@@ -9,6 +9,7 @@ const {getCancion, postCancion,
     getAllCanciones, getLetra, 
     deleteCancion, updateCancion, buscarCancion} = require('../controllers/tracksController');
 
+//se asocian las rutas del API con sus respectivos métodos
 router.get('/tracks/:trackId', getCancion);
 
 router.post('/tracks', jsonParser, postCancion);
