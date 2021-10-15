@@ -8,7 +8,7 @@ export class TrackServiceService {
 
   constructor(private http: HttpClient) { }
 
-  address = 'http://3.144.7.110:4000/';
+  address = 'http://18.216.128.35:4000/';
 
   songIdToPlay: string = '';
 
