@@ -99,7 +99,7 @@ letra: `
       this.inicializarCredenciales();
     }
     else{
-      this.usuarioPremium = premium;
+      this.usuarioPremium = (premium == "true");
     }
 
     this.obtenerCancionesHome();
