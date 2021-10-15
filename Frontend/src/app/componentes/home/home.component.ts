@@ -97,6 +97,10 @@ letra: `
     if (premium == null){
       this.inicializarCredenciales();
     }
+    else{
+      this.usuarioPremium = premium;
+    }
+    
     this.obtenerCancionesHome();
 
   }
