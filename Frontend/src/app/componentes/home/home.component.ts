@@ -94,6 +94,7 @@ letra: `
   ngOnInit(): void {
 
     var premium = localStorage.getItem("premium");
+    console.log(premium);
     if (premium === null){
       this.inicializarCredenciales();
     }
