@@ -57,7 +57,7 @@ export class PlayerComponent implements OnInit {
       this.nombreCancion = data.nombre;
 
 
-      this.play("http://3.144.7.110:4000/tracks/"+this.cancionId).then((res) => {
+      this.play("http://18.216.128.35:4000/tracks/"+this.cancionId).then((res) => {
       }).catch((err) => {
         console.log(err.message);
       });
