@@ -94,13 +94,13 @@ letra: `
   ngOnInit(): void {
 
     var premium = localStorage.getItem("premium");
-    if (premium == null){
+    if (premium === null){
       this.inicializarCredenciales();
     }
     else{
       this.usuarioPremium = premium;
     }
-    
+
     this.obtenerCancionesHome();
 
   }
@@ -156,6 +156,7 @@ letra: `
     .subscribe((confirmado: Boolean) => {
       if (confirmado) {
         localStorage.removeItem("premium");
+        console.log(localStorage.getItem("premium"));
         this.keycloakService.logout("http://18.216.128.35:4200/");
       } else {
         console.log('Error al cerrar sesión: ');
