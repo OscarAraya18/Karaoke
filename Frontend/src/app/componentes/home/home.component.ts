@@ -93,7 +93,10 @@ letra: `
 
   ngOnInit(): void {
 
-    this.inicializarCredenciales();
+    var premium = localStorage.getItem("premium");
+    if (premium == null){
+      this.inicializarCredenciales();
+    }
     this.obtenerCancionesHome();
 
   }
@@ -104,6 +107,7 @@ letra: `
     let userDetails:any = await this.keycloakService.loadUserProfile();
 
     this.usuarioPremium = (userDetails.attributes.premium[0] == "true");
+    localStorage.setItem("premium", this.usuarioPremium);
   }
 
   obtenerCancionesHome(){
@@ -147,6 +151,7 @@ letra: `
     .afterClosed()
     .subscribe((confirmado: Boolean) => {
       if (confirmado) {
+        localStorage.removeItem("premium");
         this.keycloakService.logout("http://18.216.128.35:4200/");
       } else {
         console.log('Error al cerrar sesión: ');
