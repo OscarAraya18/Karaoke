@@ -158,7 +158,7 @@ letra: `
       if (confirmado) {
         localStorage.removeItem("premium");
         console.log(localStorage.getItem("premium"));
-        this.keycloakService.logout("http://3.15.26.118:4200/");
+        this.keycloakService.logout("http://18.119.106.198:4200/");
       } else {
         console.log('Error al cerrar sesión: ');
       }
